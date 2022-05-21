@@ -1,0 +1,155 @@
+{
+  "main": {
+    "name":"Maslax Ali",
+    "description":"I am a backend developer who specialies in Net Core And Java Frameworks. This website is for me to keep all my interests in one place, and for you to learn about them",
+    "image":"profilepic.png",
+    "bio":"I worked within multiple frameworks in Java, Nodejs, and C#. More lenient towards the backend side of things, but sometimes Sprints are just U.I heavy. Constantly, I find myself debugging between frameworks to find where the feature/issue should be. In my time, I have learned to avoid putting logic in the Frontend, changing field(s) from a shared Schema, and not doing full validation tests of code running through different environments. My big takeaway from my work experience has been that scale makes Apps behave differently; both in terms of the number of devices you're supporting, and the number of API services that are coupled. My approach looking forward in my Career is to stay curious and keep people close. At the end of the day it's a team effort; from the Manager, BA, all the way to the developers. Different frameworks and libraries will always be constant. Technology moves at such breathtaking pace that it's fun trying to keep up",
+    "contactmessage":"Want to reach out?",
+    "email": "alimaslax@gmail.com",
+    "phone": "857-220-9130",
+    "github":"https://github.com/alimaslax/",
+    "project":"https://www.linkedin.com/in/alimaslax/",
+    "address":{
+      "city":"Columbus",
+      "state":"OH"
+    },
+    "website": "http://www.timbakerdev.com",
+    "resumedownload":"alimaslax_resume.pdf",
+    "social":[
+      {
+        "name":"facebook",
+        "url":"https://www.facebook.com/maslax.ali.56",
+        "className":"fa fa-facebook"
+      },
+      {
+        "name":"twitter",
+        "url":"https://twitter.com/alimaslax",
+        "className":"fa fa-twitter"
+      },
+      {
+        "name":"linkedin",
+        "url":"https://www.linkedin.com/in/alimaslax/",
+        "className":"fa fa-linkedin"
+      },
+      {
+        "name":"instagram",
+        "url":"https://www.instagram.com/malimax614/?hl=en",
+        "className":"fa fa-instagram"
+      },
+      {
+        "name":"github",
+        "url":"https://github.com/alimaslax/",
+        "className":"fa fa-github"
+      }
+    ]
+  },
+  "resume":{
+    "skillmessage":"Here you can create a short write-up of your skills to show off to employers",
+    "education":[
+      {
+        "school":"University of Massachusetts Boston",
+        "degree":"B.S Computer Science (3.3)",
+        "graduated":"Dec 2018",
+        "description":"Activities: SSA (Treasurer), MSA (Coordinator), 2018 Hack Diversity Alumni \nCoursework: Android Development, Database Management, Linux Operating Systems"
+      },
+      {
+        "school":"Northeastern University",
+        "degree":"Candidate B.S Computer Science (3.0)",
+        "graduated":"Jan 2014",
+        "description":"Web Development, Data Structure & Algorithms"
+      }
+    ],
+    "work":[
+      {
+        "company":"NetJets",
+        "title":"Software Developer/Analyst",
+        "years":"April 2021 - Present",
+        "description":"Porting legacy Asp.Net 4.5 backend & MVC pages to the latest Net Core 6.0 ● Built from ground up, Session Management/Authentication & Authorization middleware ● Created a custom StackExchange.Redis for the port, supporting our legacy Redis State Management ● Enhancing an advanced Flight Reservation web app written in React and ASP.NET ● Maintaining API domain services written in Groovy Grails that we are coupled to ● Using React Native to develop on both iOS and Android ● QA testing and validation for peer reviewed work ● Living Documentation for application setup, and the stories we work on"
+      },
+      {
+        "company":"BoyleTransport",
+        "title":"Software Engineer",
+        "years":"Nov 2020 - April 2021",
+        "description":"Maintained and enhanced production grade inventory tracking Apps in Java ● Ported legacy JSP App to Angular with both a Struct2 & Spring-Boot backend support ● SQL Database Management (writing to tables) / business logic queries executed in Struct2 ● OpenAPI/Swagger documentation for all API endpoints created"
+      },
+      {
+        "company":"Liberty Mutual",
+        "title":"Technology Associate",
+        "years":"June 2019 - Mar 2020",
+        "description":"Composed a best practice project for a Spring-Boot RESTful app ● Used API Contract driven approach, with BDD/TDD testing ● Embedded OAuth2, Sonar, OpenAPI, Cucumber, and PMD into project ● Enhanced a document searching Angular app with new data sources ● Experienced using CI/CD build tools with Atlassian Bamboo and Git"
+      },
+      {
+        "company":"Liberty Mutual",
+        "title":"Software Engineer Intern",
+        "years":"Aug 2018 - Jan 2019",
+        "description":"Monitored ElasticSearch, as it processed 165 million logs a day ● Used bounded context with docker compose to spin up ELK stack containers ● Built Vue.js app to register logs coming from different servers with our elastic cluster ● Gained strong familiarity with the Agile development framework"
+      }
+    ],
+    "skills":[
+      {
+        "name":"C#",
+        "level":"90%"
+      },
+      {
+        "name":"Java",
+        "level":"85%"
+      },
+      {
+        "name":"Net Core",
+        "level":"90%"
+      },
+      {
+        "name":"SQL",
+        "level":"75%"
+      },
+      {
+        "name":"React",
+        "level":"65%"
+      },
+      {
+        "name":"Angular",
+        "level":"65%"
+      }
+    ]
+  },
+  "portfolio":{
+    "projects": [
+      {
+        "title":"NetJets",
+        "category":"Largest Private Aviation Company",
+        "image":"01.jpg",
+        "url":"https://www.netjets.com"
+      },
+      {
+        "title":"Boyle Security Transportation",
+        "category":"Medicine Logistics Company",
+        "image":"02.jpg",
+        "url":"http://wwww.boyletransport.com/"
+      },
+      {
+        "title":"Liberty Mutual",
+        "category":"3rd Largest Insurance Company",
+        "image":"03.jpg",
+        "url":"http://www.libertymutual.com/"
+      },
+      {
+        "title":"PCM",
+        "category":"A Division That Provides Technology and IT products",
+        "image":"04.jpg",
+        "url":"https://www.insight.com/"
+      },
+      {
+        "title":"Arrow Electronics",
+        "category":"Electronic Component Products, Datasheets, Reference Designs Technology",
+        "image":"05.jpg",
+        "url":"https://www.arrow.com/"
+      },
+      {
+        "title":"Sasaki Associates",
+        "category":"Interdisciplinary Architecture, Planning, Landscape, and Design Firm",
+        "image":"06.jpg",
+        "url":"https://www.sasaki.com/"
+      }
+    ]
+  }
+}
