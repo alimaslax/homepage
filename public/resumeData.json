@@ -1,11 +1,11 @@
 {
   "main": {
     "name":"Maslax Ali",
-    "description":"I am a backend developer who specialies in Net Core And Java Frameworks. This website is for me to keep all my interests in one place, and for you to learn about them",
+    "description":"I am a backend developer who specializes in Net Core And Java Frameworks. This website is for me to keep all my interests in one place, and for you to learn about them",
     "image":"profilepic.png",
     "bio":"I worked within multiple frameworks in Java, Nodejs, and C#. More lenient towards the backend side of things, but sometimes Sprints are just U.I heavy. Constantly, I find myself debugging between frameworks to find where the feature/issue should be. Takeaway from my work experience has been that scale makes Apps behave differently; both in terms of the number of devices you're supporting, and the number of API services that are coupled. Looking forward in my Career, I want to stay curious and keep people close. At the end of the day it's a team effort; from the Manager, BA, all the way to the developers. Different frameworks and libraries will always be constant. Technology moves at such breathtaking pace that it's fun trying to keep up.",
     "contactmessage":"Want to reach out?",
-    "email": "alimaslax@gmail.com",
+    "email": "alimaslax.web@gmail.com",
     "phone": "857-220-9130",
     "github":"https://github.com/alimaslax/",
     "project":"https://www.linkedin.com/in/alimaslax/",
