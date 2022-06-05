@@ -44,7 +44,7 @@
     ]
   },
   "resume":{
-    "skillmessage":"Here you can create a short write-up of your skills to show off to employers",
+    "skillmessage":"Some of my knowledge base",
     "education":[
       {
         "school":"University of Massachusetts Boston",
@@ -100,15 +100,15 @@
       },
       {
         "name":"SQL",
-        "level":"75%"
+        "level":"70%"
       },
       {
         "name":"React",
-        "level":"65%"
+        "level":"60%"
       },
       {
         "name":"Angular",
-        "level":"65%"
+        "level":"45%"
       }
     ]
   },
