@@ -94,12 +94,16 @@ class Header extends Component {
             <hr />
             <Fade bottom duration={2000}>
               <ul className="social">
-                <a href={project} className="button btn project-btn">
+                <div className="center-align">
+                <a href={project} className="button btn project-btn" style={{ width: "150px"}}>
                   <i className="fa fa-book"></i>LinkedIn
                 </a>
-                <a href={github} className="button btn github-btn">
+                </div>
+                <div className="center-align">
+                <a href={github} className="button btn github-btn" style={{ width: "150px"}}>
                   <i className="fa fa-github"></i>Github
                 </a>
+                </div>
               </ul>
             </Fade>
           </div>

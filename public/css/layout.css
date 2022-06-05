@@ -1007,18 +1007,24 @@ footer .social-links li:first-child { margin-left: 0; }
 
 
 .social .btn:first-child{
-   margin-right: 30px;
+   margin-right: 0px;
 }
 .social .btn{
    padding-left: 30px;
    padding-right: 30px; 
 }
 .social .btn i{
-   margin-right: 15px;
+   margin-right: 0px;
 }
 .project-btn{
    background-color: #1abc9c !important;
 }
 .github-btn{
    background-color: #34495e !important;
+}
+
+.center-align{
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
