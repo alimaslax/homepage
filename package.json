@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^12.1.10",
     "anix": "^1.3.6",
     "express": "^4.18.1",
+    "cors":"2.8.5",
     "jquery": "^3.6.0",
     "particles-bg": "^2.5.5",
     "react": "^17.0.1",
@@ -18,12 +19,13 @@
     "react-scripts": "4.0.3",
     "react-zmage": "^0.8.5-beta.36",
     "request": "^2.88.2",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.0.1",
+    "react-google-recaptcha-v3":"1.9.8"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "email-server": "node src/Express/index.js",
-    "build": "react-scripts build",
+    "start": "env-cmd -f ../.env react-scripts start",
+    "email-server": "env-cmd -f ../.env node src/Express/index.js",
+    "build": "env-cmd -f ../.env react-scripts build",
     "serve": "node serve.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -47,6 +49,7 @@
     ]
   },
   "devDependencies": {
-    "chokidar": "^3.5.1"
+    "chokidar": "^3.5.1",
+    "env-cmd":"10.1.0"
   }
 }

@@ -14,7 +14,7 @@ jQuery(document).ready(function($) {
           {
             scrollTop: $target.offset().top
           },
-          800,
+          200,
           "swing",
           function() {
             window.location.hash = target;
@@ -70,49 +70,8 @@ jQuery(document).ready(function($) {
       directionNav: false,
       smoothHeight: true,
       slideshowSpeed: 7000,
-      animationSpeed: 600,
+      animationSpeed: 200,
       randomize: false
-    });
-
-    $("form#contactForm button.submit").click(function() {
-      $("#image-loader").fadeIn();
-
-      var contactName = $("#contactForm #contactName").val();
-      var contactEmail = $("#contactForm #contactEmail").val();
-      var contactSubject = $("#contactForm #contactSubject").val();
-      var contactMessage = $("#contactForm #contactMessage").val();
-
-      var data =
-        "contactName=" +
-        contactName +
-        "&contactEmail=" +
-        contactEmail +
-        "&contactSubject=" +
-        contactSubject +
-        "&contactMessage=" +
-        contactMessage;
-
-      $.ajax({
-        type: "POST",
-        url: "inc/sendEmail.php",
-        data: data,
-        success: function(msg) {
-          // Message was sent
-          if (msg == "OK") {
-            $("#image-loader").fadeOut();
-            $("#message-warning").hide();
-            $("#contactForm").fadeOut();
-            $("#message-success").fadeIn();
-          }
-          // There was an error
-          else {
-            $("#image-loader").fadeOut();
-            $("#message-warning").html(msg);
-            $("#message-warning").fadeIn();
-          }
-        }
-      });
-      return false;
     });
   }, time);
 });

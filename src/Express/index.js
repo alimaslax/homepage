@@ -1,57 +1,95 @@
 const express = require('express');
 var request = require('request');
+var cors = require('cors')
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.EXPRESS_PORT || 3005;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
-app.post('/send', async function(req, res) {
-    let text = req.body.text;
+app.post('/send', async function (req, res) {
+    let message = req.body;
     const postData = {
         sender: {
-          name: "Sender Alex",
-          email: "alimaslax@gmail.com"
+            name: message.contactName,
+            email: message.contactEmail
         },
         to: [
-          {
-            email: "alimaslax.web@gmail.com",
-            name: "John Doe"
-          }
+            {
+                email: "alimaslax.web@gmail.com",
+                name: "Maslax Ali Web"
+            }
         ],
-        subject: "Hello world",
-        htmlContent: "<html><head></head><body><p>Hello,</p>This is my first transactional email sent from Sendinblue.</p></body></html>"
-      };
+        subject: message.contactSubject,
+        htmlContent: "<html><head></head><body>" + message.contactMessage.replace(/[^a-zA-Z ]/g, "") + "</body></html>"
+    };
     var clientServerOptions = {
         uri: 'https://api.sendinblue.com/v3/smtp/email',
         body: JSON.stringify(postData),
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'accept':'application/json',
-            'api-key':'XXXX',
+            'accept': 'application/json',
+            'api-key': process.env.SENDINBLUE_APIKEY,
 
         }
     }
-    text = await doRequest(clientServerOptions);
-    res.send({
-      'text': text,
-    });
-  });
+    try {
+        var msg = await doRequest(clientServerOptions);
+        res.statusCode = 200;
+        res.send({
+            'msg': "msg",
+        });
+    } catch (error) {
+        res.statusCode = 500;
+        res.send({
+            'error': "error sending email",
+        });
+    }
+});
 
-  function doRequest(options) {
+// verify reCAPTCHA response
+app.post('/verify', async function (req, res) {
+    var clientServerOptions = {
+        uri: "https://www.google.com/recaptcha/api/siteverify?secret="+process.env.GOOGLE_RECAPTCHASITEKEY+"&response=" + req.body.token,
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'accept': 'application/json',
+        }
+    }
+    try {
+        var msg = await doRequest(clientServerOptions);
+        var obj = JSON.parse(msg);
+        if (obj.success)
+            res.statusCode = 200;
+        else
+            res.statusCode = 500;
+        res.send({
+            'success': obj.success
+        });
+
+    } catch (error) {
+        res.statusCode = 500;
+        res.send({
+            'error': "error sending email",
+        });
+    }
+});
+
+function doRequest(options) {
     return new Promise(function (resolve, reject) {
         request(options, function (error, res) {
             if (!error && res.statusCode == 200 || res.statusCode == 201) {
                 resolve(res.body);
-              } else {
+            } else {
                 reject(error);
-              }
+            }
         });
     });
-  }
+}
 
-  
-  app.listen(port);
-  console.log('Server started at http://localhost:' + port);
+app.listen(port);
+console.log('Server started at http://localhost:' + port);

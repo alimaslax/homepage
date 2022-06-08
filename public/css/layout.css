@@ -859,6 +859,13 @@ call-to-action .button {
 	color: #fff;
 	background-color: #0762f9;
 }
+#contact button.submit:disabled {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  cursor: not-allowed;
+  color: #666666;
+}
+
 #contact button.submit {
 	text-transform: uppercase;
 	letter-spacing: 3px;
