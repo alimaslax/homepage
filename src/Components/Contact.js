@@ -180,13 +180,11 @@ class Contact extends Component {
       },
       body: JSON.stringify(data)
     };
-    console.log(token);
     fetch("http://127.0.0.1:3005/verify", requestMetadata)
       .then((res) =>
         res.json()
       )
       .then(response => {
-        console.log(response);
         this.setState({ isRobot: !response.success });
       });
   };

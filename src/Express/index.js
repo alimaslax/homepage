@@ -38,9 +38,10 @@ app.post('/send', async function (req, res) {
     }
     try {
         var msg = await doRequest(clientServerOptions);
+        console.log(msg);
         res.statusCode = 200;
         res.send({
-            'msg': "msg",
+            'msg': "success",
         });
     } catch (error) {
         res.statusCode = 500;
