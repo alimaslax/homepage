@@ -24,7 +24,7 @@
   },
   "scripts": {
     "start": "env-cmd -f ../.env react-scripts start",
-    "email-server": "env-cmd -f ../.env node src/Express/index.js",
+    "email-server": "env-cmd -f ../.env forever start --minUptime 1000 --spinSleepTime 1000 src/Express/index.js",
     "build": "env-cmd -f ../.env react-scripts build",
     "serve": "node serve.js",
     "test": "react-scripts test",
