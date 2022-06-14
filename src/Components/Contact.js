@@ -118,7 +118,7 @@ class Contact extends Component {
                   </fieldset>
                 </form>
               </GoogleReCaptchaProvider>
-              <div id="message-warning"> Error boy</div>
+              <div id="message-warning"> Please Check Your Form</div>
               <div id="message-success">
                 <i className="fa fa-check"></i>Your message was sent, thank you!
                 <br />
@@ -199,6 +199,13 @@ class Contact extends Component {
   sendEmail = () => {
     this.setState({ isRobot: true });
 
+    if(this.state.contactName.length < 3 ||
+      this.state.contactEmail.length < 3 ||
+      this.state.contactSubject.length < 3 ||
+      this.state.contactMessage.length < 3 ){
+        $("#message-warning").fadeIn();
+        return;
+    }
     var data =
       "contactName=" +
       this.state.contactName +
@@ -223,6 +230,9 @@ class Contact extends Component {
       fetch("https://alimaslax.com:3006/send", requestMetadata)
         .then(res => res.json())
         .then(response => {
+          if($("#message-warning")){
+            $("#message-warning").fadeOut();
+          }
           $("#image-loader").fadeOut();
           $("#contactForm").fadeOut();
           $("#message-success").fadeIn();

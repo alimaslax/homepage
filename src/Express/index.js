@@ -18,12 +18,30 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
+const validateEmail = (email) => {
+    return email.match(
+      /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+};
+
 app.post('/send', async function (req, res) {
     let message = req.body;
+    let validEmail = validateEmail(message.contactEmail);
+
+    if(!validEmail){
+        res.statusCode = 400;
+        res.send({
+            'msg': "fail",
+        });
+        return;
+    }
+
+    let email = message.contactEmail.substring(0, message.contactEmail.indexOf("@"));
+
     const postData = {
         sender: {
             name: message.contactName,
-            email: message.contactEmail
+            email: `${email}@sendinblue.com`
         },
         to: [
             {
@@ -32,7 +50,8 @@ app.post('/send', async function (req, res) {
             }
         ],
         subject: message.contactSubject,
-        htmlContent: "<html><head></head><body>" + message.contactMessage.replace(/[^a-zA-Z ]/g, "") + "</body></html>"
+        htmlContent: "<html><head></head><body>" + 
+            message.contactMessage.replace(/[^a-zA-Z ]/g, "") + "<br/> Email: "+ message.contactEmail + "</body></html>"
     };
     var clientServerOptions = {
         uri: 'https://api.sendinblue.com/v3/smtp/email',
@@ -63,7 +82,8 @@ app.post('/send', async function (req, res) {
 // verify reCAPTCHA response
 app.post('/verify', async function (req, res) {
     var clientServerOptions = {
-        uri: "https://www.google.com/recaptcha/api/siteverify?secret="+process.env.GOOGLE_RECAPTCHASITEKEY+"&response=" + req.body.token,
+        uri: "https://www.google.com/recaptcha/api/siteverify?secret=" +
+            process.env.GOOGLE_RECAPTCHASITEKEY+"&response=" + req.body.token,
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
