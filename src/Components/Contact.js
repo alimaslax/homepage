@@ -197,7 +197,6 @@ class Contact extends Component {
   }
 
   sendEmail = () => {
-    this.setState({ isRobot: true });
 
     if(this.state.contactName.length < 3 ||
       this.state.contactEmail.length < 3 ||
@@ -230,6 +229,7 @@ class Contact extends Component {
       fetch("https://alimaslax.com:3006/send", requestMetadata)
         .then(res => res.json())
         .then(response => {
+          this.setState({ isRobot: true });
           if($("#message-warning")){
             $("#message-warning").fadeOut();
           }
@@ -240,6 +240,7 @@ class Contact extends Component {
         });
     }
     catch (error) {
+      this.setState({ isRobot: true });
       console.log("error")
     }
 
