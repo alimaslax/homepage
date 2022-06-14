@@ -48,7 +48,7 @@ class Contact extends Component {
           <Slide left duration={1000}>
             <div className="eight columns">
               <GoogleReCaptchaProvider reCaptchaKey={process.env.REACT_APP_GOOGLE_RECAPTCHAKEY}>
-                <form id="contactForm">
+                <form id="contactForm" onSubmit={e => e.preventDefault()}>
                   <fieldset>
                     <div>
                       <label htmlFor="contactName">
@@ -56,7 +56,6 @@ class Contact extends Component {
                       </label>
                       <input
                         type="text"
-                        defaultValue=""
                         size="35"
                         id="contactName"
                         name="contactName"
@@ -71,7 +70,6 @@ class Contact extends Component {
                       </label>
                       <input
                         type="text"
-                        defaultValue=""
                         size="35"
                         id="contactEmail"
                         name="contactEmail"
@@ -84,7 +82,6 @@ class Contact extends Component {
                       <label htmlFor="contactSubject">Subject</label>
                       <input
                         type="text"
-                        defaultValue=""
                         size="35"
                         id="contactSubject"
                         name="contactSubject"
@@ -197,7 +194,7 @@ class Contact extends Component {
   }
 
   sendEmail = () => {
-
+    
     if(this.state.contactName.length < 3 ||
       this.state.contactEmail.length < 3 ||
       this.state.contactSubject.length < 3 ||
