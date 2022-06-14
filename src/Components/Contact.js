@@ -180,7 +180,7 @@ class Contact extends Component {
       },
       body: JSON.stringify(data)
     };
-    fetch("http://127.0.0.1:3005/verify", requestMetadata)
+    fetch("https://alimaslax.com:3006/verify", requestMetadata)
       .then((res) =>
         res.json()
       )
@@ -220,7 +220,7 @@ class Contact extends Component {
     };
     try {
       $("#image-loader").fadeIn();
-      fetch("http://127.0.0.1:3005/send", requestMetadata)
+      fetch("https://alimaslax.com:3006/send", requestMetadata)
         .then(res => res.json())
         .then(response => {
           $("#image-loader").fadeOut();
