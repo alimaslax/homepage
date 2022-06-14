@@ -1,9 +1,18 @@
 const express = require('express');
 var request = require('request');
-var cors = require('cors')
+var cors = require('cors');
+var fs = require('fs');
+var http = require('http');
+var https = require('https');
 
 const app = express();
-const port = process.env.EXPRESS_PORT || 3005;
+const http_port = process.env.EXPRESS_PORT || 3005;
+const https_port = 3006;
+
+var privateKey  = fs.readFileSync('private.pem', 'utf8');
+var certificate = fs.readFileSync('cert.pem', 'utf8');
+
+var credentials = {key: privateKey, cert: certificate};
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -92,5 +101,10 @@ function doRequest(options) {
     });
 }
 
-app.listen(port);
-console.log('Server started at http://localhost:' + port);
+var httpServer = http.createServer(app);
+var httpsServer = https.createServer(credentials, app);
+
+httpServer.listen(http_port);
+httpsServer.listen(https_port);
+
+console.log('Server started at https://localhost:' + https_port);
