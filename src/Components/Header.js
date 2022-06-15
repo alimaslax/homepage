@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 import ParticlesBg from "particles-bg";
 import Fade from "react-reveal";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 class Header extends Component {
   
@@ -39,6 +45,7 @@ class Header extends Component {
     const description = this.props.data.description;
 
     return (
+      <Router>
       <header id="home">
         <ParticlesBg color="#ADD8E6" type="cobweb" bg={true} />
 
@@ -70,9 +77,7 @@ class Header extends Component {
             </li>
 
             <li>
-              <a className="smoothscroll" href="#portfolio">
-                Works
-              </a>
+              <Link to="/Jupyter">Work</Link>
             </li>
 
             <li>
@@ -115,6 +120,7 @@ class Header extends Component {
           </a>
         </p>
       </header>
+      </Router>
     );
   }
 }
