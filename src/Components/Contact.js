@@ -135,28 +135,12 @@ class Contact extends Component {
                   <span>{phone}</span>
                 </p>
               </div>
-
+              
               <div className="widget widget_tweets">
                 <h4 className="widget-title">Latest Tweets</h4>
                 <ul id="twitter">
                   <li>
-                    <span>
-                      OpenAI DALL-E 2: Top 10 Insane Results! 🤖
-                      https://youtu.be/X3_LD3R_Ygs via @YouTube
-                    </span>
-                    <b>
-                      <a href="./">2 Days Ago</a>
-                    </b>
-                  </li>
-                  <li>
-                    <span>
-                      AWS workshop was informative. It's great to see where Fargate is currently and the roadmap ahead.
-                      Lambda for APIs, Fargate for everything else (in 5 years or so). No more resource previsioning,
-                      with scale scale scale
-                    </span>
-                    <b>
-                      <a href="./">3 Days Ago</a>
-                    </b>
+                  <a class="twitter-timeline" data-width="300" data-height="500" data-dnt="true" data-theme="dark" href="https://twitter.com/alimaslax?ref_src=twsrc%5Etfw">Tweets by alimaslax</a>
                   </li>
                 </ul>
               </div>
