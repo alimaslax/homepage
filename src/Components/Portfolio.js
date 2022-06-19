@@ -31,7 +31,11 @@ class Portfolio extends Component {
                 id="portfolio-wrapper"
                 className="bgrid-thirds s-bgrid-thirds cf"
               >
-                {projects}
+                <iframe
+                  src="https://alimaslax.github.io/homepage_jupyter/lab?path=pyolite%2Ffolium.ipynb&jupyterlab-theme=jupyterlab_miami_nights"
+                  width="100%"
+                  height="500px">
+                </iframe>
               </div>
             </div>
           </div>

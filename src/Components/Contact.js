@@ -47,7 +47,6 @@ class Contact extends Component {
         <div className="row">
           <Slide left duration={1000}>
             <div className="eight columns">
-              <GoogleReCaptchaProvider reCaptchaKey={process.env.REACT_APP_GOOGLE_RECAPTCHAKEY}>
                 <form id="contactForm" onSubmit={e => e.preventDefault()}>
                   <fieldset>
                     <div>
@@ -103,9 +102,6 @@ class Contact extends Component {
                         name="contactMessage"
                       ></textarea>
                     </div>
-                    <GoogleReCaptcha
-                      onVerify={this.verifyRecaptchaCallback}
-                    />
                     <div>
                       <button className="submit" disabled={this.state.isRobot} onClick={this.sendEmail}>Submit</button>
                       <span id="image-loader" ref="imageLoader">
@@ -114,7 +110,6 @@ class Contact extends Component {
                     </div>
                   </fieldset>
                 </form>
-              </GoogleReCaptchaProvider>
               <div id="message-warning"> Please Check Your Form</div>
               <div id="message-success">
                 <i className="fa fa-check"></i>Your message was sent, thank you!

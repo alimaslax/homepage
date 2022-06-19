@@ -1,15 +1,17 @@
 import React, { Component } from "react";
 import ParticlesBg from "particles-bg";
 import Fade from "react-reveal";
+import About from "./About";
+import Resume from "./Resume";
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route,
   Link
 } from "react-router-dom";
 
 class Header extends Component {
-  
+
   render() {
     let config = {
       num: [4, 7],
@@ -29,14 +31,14 @@ class Header extends Component {
       g: 5,    // gravity
       // f: [2, -1], // force
       onParticleUpdate: (ctx, particle) => {
-          ctx.beginPath();
-          ctx.rect(particle.p.x, particle.p.y, particle.radius * 2, particle.radius * 2);
-          ctx.fillStyle = particle.color;
-          ctx.fill();
-          ctx.closePath();
+        ctx.beginPath();
+        ctx.rect(particle.p.x, particle.p.y, particle.radius * 2, particle.radius * 2);
+        ctx.fillStyle = particle.color;
+        ctx.fill();
+        ctx.closePath();
       }
     };
-    
+
     if (!this.props.data) return null;
 
     const project = this.props.data.project;
@@ -45,7 +47,6 @@ class Header extends Component {
     const description = this.props.data.description;
 
     return (
-      <Router>
       <header id="home">
         <ParticlesBg color="#ADD8E6" type="cobweb" bg={true} />
 
@@ -59,15 +60,11 @@ class Header extends Component {
 
           <ul id="nav" className="nav">
             <li className="current">
-              <a className="smoothscroll" href="#home">
-                Home
-              </a>
+              <Link to="/">Home</Link>
             </li>
 
             <li>
-              <a className="smoothscroll" href="#about">
-                About
-              </a>
+              <Link to="/about">About</Link>
             </li>
 
             <li>
@@ -77,7 +74,9 @@ class Header extends Component {
             </li>
 
             <li>
-              <Link to="/Jupyter">Work</Link>
+              <a className="smoothscroll" href="#portfolio">
+                Works
+              </a>
             </li>
 
             <li>
@@ -100,14 +99,14 @@ class Header extends Component {
             <Fade bottom duration={2000}>
               <ul className="social">
                 <div className="center-align">
-                <a href={project} className="button btn project-btn" style={{ width: "150px"}}>
-                  <i className="fa fa-book"></i>LinkedIn
-                </a>
+                  <a href={project} className="button btn project-btn" style={{ width: "150px" }}>
+                    <i className="fa fa-book"></i>LinkedIn
+                  </a>
                 </div>
                 <div className="center-align">
-                <a href={github} className="button btn github-btn" style={{ width: "150px"}}>
-                  <i className="fa fa-github"></i>Github
-                </a>
+                  <a href={github} className="button btn github-btn" style={{ width: "150px" }}>
+                    <i className="fa fa-github"></i>Github
+                  </a>
                 </div>
               </ul>
             </Fade>
@@ -120,7 +119,6 @@ class Header extends Component {
           </a>
         </p>
       </header>
-      </Router>
     );
   }
 }
