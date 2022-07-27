@@ -47,8 +47,8 @@ class Header extends Component {
     const description = this.props.data.description;
 
     return (
-      <header id="home">
-        <ParticlesBg color="#ADD8E6" type="cobweb" bg={true} />
+      <header class="home">
+        <ParticlesBg num={10} color="#ADD8E6" type="cobweb" bg={false} />
 
         <nav id="nav-wrap">
           <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
@@ -59,65 +59,31 @@ class Header extends Component {
           </a>
 
           <ul id="nav" className="nav">
+
             <li className="current">
               <Link to="/">Home</Link>
             </li>
 
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/resume">Resume</Link>
             </li>
 
             <li>
-              <a className="smoothscroll" href="#resume">
-                Resume
-              </a>
+              <Link to="/notebook">Notebook</Link>
             </li>
 
             <li>
-              <a className="smoothscroll" href="#portfolio">
-                Works
-              </a>
+              <Link to="/projects">Projects</Link>
             </li>
 
             <li>
-              <a className="smoothscroll" href="#contact">
-                Contact
-              </a>
+              <Link to="/contact">Contact Me</Link>
             </li>
+
           </ul>
         </nav>
 
-        <div className="row banner">
-          <div className="banner-text">
-            <Fade bottom>
-              <h1 className="responsive-headline">{name}</h1>
-            </Fade>
-            <Fade bottom duration={1200}>
-              <h3>{description}.</h3>
-            </Fade>
-            <hr />
-            <Fade bottom duration={2000}>
-              <ul className="social">
-                <div className="center-align">
-                  <a href={project} className="button btn project-btn" style={{ width: "150px" }}>
-                    <i className="fa fa-book"></i>LinkedIn
-                  </a>
-                </div>
-                <div className="center-align">
-                  <a href={github} className="button btn github-btn" style={{ width: "150px" }}>
-                    <i className="fa fa-github"></i>Github
-                  </a>
-                </div>
-              </ul>
-            </Fade>
-          </div>
-        </div>
 
-        <p className="scrolldown">
-          <a className="smoothscroll" href="#about">
-            <i className="icon-down-circle"></i>
-          </a>
-        </p>
       </header>
     );
   }

@@ -8,6 +8,7 @@ import About from "./Components/About";
 import Resume from "./Components/Resume";
 import Contact from "./Components/Contact";
 import Portfolio from "./Components/Portfolio";
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -52,8 +53,11 @@ class App extends Component {
         <div className="App">
           <Header data={this.state.resumeData.main} />
           <Routes>
-            <Route exact path="/" element={<Resume data={this.state.resumeData.resume} />} />
-            <Route exact path="/about" element={<About data={this.state.resumeData.main} />} />
+            <Route exact path="/" element={<About data={this.state.resumeData.main} />} />
+            <Route exact path="/resume" element={<Resume data={this.state.resumeData.resume} />} />
+            <Route exact path="/notebook" element={<Portfolio data={this.state.resumeData.portfolio} />} />
+            <Route exact path="/projects" element={<Footer data={this.state.resumeData.main} />} />
+            <Route exact path="/contact" element={<Contact data={this.state.resumeData.main} />} />
           </Routes>
         </div>
       </Router>
