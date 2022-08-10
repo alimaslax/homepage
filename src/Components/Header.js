@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import ParticlesBg from "particles-bg";
-import Fade from "react-reveal";
-import About from "./About";
-import Resume from "./Resume";
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -11,6 +9,29 @@ import {
 } from "react-router-dom";
 
 class Header extends Component {
+  constructor(props) {
+    super(props);
+    this.init();
+    // state modifying func need to be bound
+    this.closePan = this.closePan.bind(this);
+  }
+  init() {
+    // Always set the initial state in its own function, so that
+    // you can trivially reset your components at any point.
+    this.state = {
+      isOpen: true
+    };
+  }
+  closePan() {
+    console.log("Got here");
+    this.setState(
+      prevState => {
+        return {
+          isOpen: !prevState.isOpen
+        };
+      },
+      () => console.log(this.state));
+  }
 
   render() {
     let config = {
@@ -45,42 +66,41 @@ class Header extends Component {
     const github = this.props.data.github;
     const name = this.props.data.name;
     const description = this.props.data.description;
-
     return (
       <header class="home">
         <ParticlesBg num={10} color="#ADD8E6" type="cobweb" bg={false} />
 
         <nav id="nav-wrap">
-          <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
+          <a onClick={this.closePan} className="mobile-btn" href="#nav-wrap" title="Show navigation">
             Show navigation
           </a>
-          <a className="mobile-btn" href="#home" title="Hide navigation">
+          <a onClick={this.closePan} className="mobile-btn" href="#home" title="Hide navigation">
             Hide navigation
           </a>
 
-          <ul id="nav" className="nav">
+          {!this.state.isOpen ? <ul id="nav" className="nav">
 
             <li className="current">
-              <Link to="/">Home</Link>
+              <Link onClick={this.closePan} to="/">Home</Link>
             </li>
 
             <li>
-              <Link to="/resume">Resume</Link>
+              <Link onClick={this.closePan} to="/resume">Resume</Link>
             </li>
 
             <li>
-              <Link to="/notebook">Notebook</Link>
+              <Link onClick={this.closePan} to="/notebook">Notebook</Link>
             </li>
 
             <li>
-              <Link to="/projects">Projects</Link>
+              <Link onClick={this.closePan} to="/projects">Social 📸</Link>
             </li>
 
             <li>
-              <Link to="/contact">Contact Me</Link>
+              <Link onClick={this.closePan} to="/contact">Contact Me</Link>
             </li>
 
-          </ul>
+          </ul> : null}
         </nav>
 
 

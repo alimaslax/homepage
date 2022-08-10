@@ -23,6 +23,7 @@
     "react-pdf":"5.7.2",
     "request": "^2.88.2",
     "web-vitals": "^1.0.1",
+    "pro-gallery":"4.1.24",
     "react-google-recaptcha-v3":"1.9.8"
   },
   "scripts": {

@@ -113,6 +113,202 @@
     ]
   },
   "portfolio":{
+    "notes": [
+      {
+        "itemId": "sample-id",
+        "mediaUrl": "images/portfolio/convolutional.jpeg",
+        "metaData": {
+         "type": "image",
+          "height": 200,
+          "width": 200,
+          "title": "sample-title",
+          "description": "sample-description",
+          "focalPoint": [100, 100],
+          "link": {
+            "url": "https://github.com/alimaslax/homepage/raw/feature/MALI-01/public/jupyter/Convolutional.pdf",
+            "target": "_blank"
+          }
+        }
+      },
+      {
+        "itemId": "sample-id",
+        "mediaUrl": "images/portfolio/digitclassification.jpeg",
+        "metaData": {
+         "type": "image",
+          "height": 333,
+          "width": 500,
+          "title": "sample-title",
+          "description": "sample-description",
+          "focalPoint": [0, 0],
+          "link": {
+            "url": "https://github.com/alimaslax/homepage/raw/feature/MALI-01/public/jupyter/Convolutional.pdf",
+            "target": "_blank"
+          }
+        }
+      },
+      {
+        "itemId": "sample-id",
+        "mediaUrl": "images/portfolio/fullyconnected.jpeg",
+        "metaData": {
+         "type": "image",
+          "height": 333,
+          "width": 500,
+          "title": "sample-title",
+          "description": "sample-description",
+          "focalPoint": [0, 0],
+          "link": {
+            "url": "https://github.com/alimaslax/homepage/raw/feature/MALI-01/public/jupyter/Convolutional.pdf",
+            "target": "_blank"
+          }
+        }
+      }
+    ],
+    "videos": [
+      {
+        "itemId": "sample-id",
+        "mediaUrl": "images/portfolio/pytorch.jpeg",
+        "metaData": {
+         "type": "image",
+          "height": 650,
+          "width": 1500,
+          "title": "sample-title",
+          "description": "sample-description",
+          "focalPoint": [0, 0],
+          "link": {
+            "url": "https://github.com/alimaslax/homepage/raw/feature/MALI-01/public/jupyter/Convolutional.pdf",
+            "target": "_blank"
+          }
+        }
+      },
+      {
+        "itemId": "sample-id",
+        "mediaUrl": "images/portfolio/learning.jpeg",
+        "metaData": {
+         "type": "image",
+          "height": 300,
+          "width": 500,
+          "title": "sample-title",
+          "description": "sample-description",
+          "focalPoint": [0, 0],
+          "link": {
+            "url": "https://github.com/alimaslax/homepage/raw/feature/MALI-01/public/jupyter/Convolutional.pdf",
+            "target": "_blank"
+          }
+        }
+      },
+      {
+        "itemId": "sample-id",
+        "mediaUrl": "images/portfolio/neural_networks.jpeg",
+        "metaData": {
+         "type": "image",
+          "height": 300,
+          "width": 500,
+          "title": "sample-title",
+          "description": "sample-description",
+          "focalPoint": [0, 0],
+          "link": {
+            "url": "https://github.com/alimaslax/homepage/raw/feature/MALI-01/public/jupyter/Convolutional.pdf",
+            "target": "_blank"
+          }
+        }
+      },
+      {
+        "itemId": "sample-id",
+        "mediaUrl": "images/portfolio/projects.jpeg",
+        "metaData": {
+         "type": "image",
+          "height": 300,
+          "width": 500,
+          "title": "sample-title",
+          "description": "sample-description",
+          "focalPoint": [0, 0],
+          "link": {
+            "url": "https://github.com/alimaslax/homepage/raw/feature/MALI-01/public/jupyter/Convolutional.pdf",
+            "target": "_blank"
+          }
+        }
+      },
+      {
+        "itemId": "sample-id",
+        "mediaUrl": "images/portfolio/vectors.jpeg",
+        "metaData": {
+         "type": "image",
+          "height": 300,
+          "width": 500,
+          "title": "sample-title",
+          "description": "sample-description",
+          "focalPoint": [0, 0],
+          "link": {
+            "url": "https://github.com/alimaslax/homepage/raw/feature/MALI-01/public/jupyter/Convolutional.pdf",
+            "target": "_blank"
+          }
+        }
+      },
+      {
+        "itemId": "sample-id",
+        "mediaUrl": "images/portfolio/vectors2.jpeg",
+        "metaData": {
+         "type": "image",
+          "height": 300,
+          "width": 500,
+          "title": "sample-title",
+          "description": "sample-description",
+          "focalPoint": [0, 0],
+          "link": {
+            "url": "https://github.com/alimaslax/homepage/raw/feature/MALI-01/public/jupyter/Convolutional.pdf",
+            "target": "_blank"
+          }
+        }
+      },
+      {
+        "itemId": "sample-id",
+        "mediaUrl": "images/portfolio/full_day_pytorch.jpeg",
+        "metaData": {
+         "type": "image",
+          "height": 300,
+          "width": 600,
+          "title": "sample-title",
+          "description": "sample-description",
+          "focalPoint": [0, 0],
+          "link": {
+            "url": "https://github.com/alimaslax/homepage/raw/feature/MALI-01/public/jupyter/Convolutional.pdf",
+            "target": "_blank"
+          }
+        }
+      },
+      {
+        "itemId": "sample-id",
+        "mediaUrl": "images/portfolio/gradients.jpeg",
+        "metaData": {
+         "type": "image",
+          "height": 300,
+          "width": 1000,
+          "title": "sample-title",
+          "description": "sample-description",
+          "focalPoint": [0, 0],
+          "link": {
+            "url": "https://github.com/alimaslax/homepage/raw/feature/MALI-01/public/jupyter/Convolutional.pdf",
+            "target": "_blank"
+          }
+        }
+      },
+      {
+        "itemId": "sample-id",
+        "mediaUrl": "images/portfolio/mst_networks.jpeg",
+        "metaData": {
+         "type": "image",
+          "height": 300,
+          "width": 600,
+          "title": "sample-title",
+          "description": "sample-description",
+          "focalPoint": [0, 0],
+          "link": {
+            "url": "https://github.com/alimaslax/homepage/raw/feature/MALI-01/public/jupyter/Convolutional.pdf",
+            "target": "_blank"
+          }
+        }
+      }
+    ],
     "projects": [
       {
         "title":"NetJets",

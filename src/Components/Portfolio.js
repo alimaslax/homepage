@@ -2,24 +2,71 @@ import React, { Component } from "react";
 import Zmage from "react-zmage";
 import Fade from "react-reveal";
 import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { ProGallery } from 'pro-gallery';
+import 'pro-gallery/dist/statics/main.css';
 
 let id = 0;
 class Portfolio extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    this.init();
+  }
+  init() {
+    // Always set the initial state in its own function, so that
+    // you can trivially reset your components at any point.
     this.state = {
-      iframe: "jupyter/Convolutional.html",
-      iframe_key: 0,
-    }
+      changeSize: window.innerWidth < 1000 ? 500 : 1025
+    };
+    //this.setState({ changeSize: this.state.changeSize + 300 })}
   }
   render() {
     if (!this.props.data) return null;
+    // Add your images here...
+
+
+    // The options of the gallery (from the playground current state)
+    const options_notes = {
+      layoutParams: {
+        structure: {
+          galleryLayout: -1,
+          scrollDirection: "HORIZONTAL",
+        },
+        groups: {
+          groupSize: 0
+        }
+
+      }
+    };
+    const container_notes = {
+      width: this.state.changeSize,
+      height: 300
+    };
+
+    const options_videos = {
+      layoutParams: {
+        structure: {
+          galleryLayout: -1,
+          enableStreching: false,
+        },
+        groups: {
+          groupSize: 1
+        }
+      }
+    };
+    // The size of the gallery container. The images will fit themselves in it
+    const container = {
+      width: this.state.changeSize,
+      height: 300
+    };
+
+    // The eventsListener will notify you anytime something has happened in the gallery.
+    const eventsListener = (eventName, eventData) => console.log({ eventName, eventData });
+
+    // The scrollingElement is usually the window, if you are scrolling inside another element, suplly it here
+    const scrollingElement = window;
+
     const projects = this.props.data.projects.map(function (projects) {
       let projectImage = "images/portfolio/" + projects.image;
-
       return (
         <div key={id++} className="columns portfolio-item">
           <div className="item-wrap">
@@ -29,49 +76,39 @@ class Portfolio extends Component {
         </div>
       );
     });
-    const openIFrame = (name) => {
-      let filename = "";
-      switch (name) {
-        case 'data':
-          filename = "jupyter/Convolutional.html";
-          break;
-        case 'digit':
-          filename = "jupyter/DigitClassification.html";
-          break;
-        case 'fullyconnected':
-          filename = "jupyter/FullyConnected.html";
-          break;
-      }
-      this.setState({
-        iframe: filename,
-        iframe_key: this.state.iframe_key + 1
-      })
-    }
+
     return (
       <section id="portfolio">
         <Fade left duration={1000} distance="40px">
           <div className="row">
             <div className="twelve columns collapsed">
+              <h1>PyTorch Notes</h1>
+
+              <div className="portfolio-wrapper">
+                <ProGallery
+                  items={this.props.data.notes}
+                  options={options_notes}
+                  container={container_notes}
+                  eventsListener={eventsListener}
+                  scrollingElement={scrollingElement}
+                />
+              </div>
+
+            </div>
+            <div className="twelve columns collapsed">
+              <h1>PyTorch Notes</h1>
+
               <div
                 id="portfolio-wrapper"
-                className="bgrid-thirds s-bgrid-thirds cf"
+                className="video-wrapper bgrid-thirds s-bgrid-thirds cf"
               >
-                <Container>
-                  <Row className="chapters">
-                    <Col><Button onClick={() => openIFrame("data")}>Data Classification</Button></Col>
-                    <Col xs={2}><Button onClick={() => openIFrame("digit")}>Digit Classification MNST</Button></Col>
-                    <Col><Button onClick={() => openIFrame("fullyconnected")}>Fully Connected NN</Button></Col>
-                  </Row>
-                </Container>
-
-                <iframe
-                  hidden={false}
-                  src={this.state.iframe}
-                  key={this.state.iframe_key}
-                  width="100%"
-                  height="800px"
-                  sandbox=''>
-                </iframe>
+                <ProGallery
+                  items={this.props.data.videos}
+                  options={options_videos}
+                  container={container}
+                  eventsListener={eventsListener}
+                  scrollingElement={scrollingElement}
+                />
               </div>
             </div>
           </div>

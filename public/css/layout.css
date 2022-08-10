@@ -413,6 +413,10 @@ ul#nav li.current a { color: #fe6928; }
 /* e. Portfolio Section
 /* ------------------------------------------------------------------ */
 
+#portfolio .row {
+   width: 100% !important;
+}
+
 #portfolio {
    background: #ebeeee;
    padding-top: 90px;
@@ -427,8 +431,21 @@ ul#nav li.current a { color: #fe6928; }
    color: #95A3A3;
 }
 
+.portfolio-wrapper {
+   width: 100%;
+   height: 300px;
+   border: solid #000;
+   border-block-width: 10px 10px;
+   background-color: #0D111D;
+}
+.video-wrapper {
+   width: 100%;
+   border: solid #000;
+   border-block-width: 10px 10px;
+   background-color: #0D111D;
+}
 /* Portfolio Content */
-#portfolio-wrapper .columns { margin-bottom: 36px; }
+#portfolio-wrapper .columns { margin-bottom: 36px; text-align: center; }
 .portfolio-item .item-wrap {
    background: #fff;
    overflow: hidden;
@@ -517,9 +534,6 @@ ul#nav li.current a { color: #fe6928; }
 /* note container */
 .note-container {
    overflow: scroll;
-}
-.chapters {
-   display: inline-flex;
 }
 
 /* popup modal */
@@ -955,26 +969,27 @@ footer a, footer a:visited { color: #525252; }
 footer a:hover, footer a:focus { color: #fff; }
 
 /* copyright */
-footer .copyright {
+#contact .copyright {
     margin: 0;
-    padding: 0;
+    padding: 0px 50px 0px 0px;
+    text-align: right;
  }
-footer .copyright li {
+#contact .copyright li {
     display: inline-block;
     margin: 0;
     padding: 0;
     line-height: 24px;
 }
-.ie footer .copyright li {
+.ie #contact .copyright li {
    display: inline;
 }
-footer .copyright li:before {
+#contact .copyright li:before {
     content: "\2022";
     padding-left: 10px;
     padding-right: 10px;
     color: #095153;
 }
-footer .copyright  li:first-child:before {
+#contact .copyright  li:first-child:before {
     display: none;
 }
 
@@ -987,7 +1002,8 @@ footer .social-links {
 footer .social-links li {
     display: inline-block;
     margin: 0;
-    padding: 0;
+    padding: 50px;
+    height: 50px;
     margin-left: 42px;
     color: #F06000;
 }
