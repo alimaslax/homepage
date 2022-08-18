@@ -78,8 +78,7 @@ class Header extends Component {
             Hide navigation
           </a>
 
-          {!this.state.isOpen ? <ul id="nav" className="nav">
-
+          <ul id="nav" className="nav">
             <li className="current">
               <Link onClick={this.closePan} to="/">Home</Link>
             </li>
@@ -99,8 +98,7 @@ class Header extends Component {
             <li>
               <Link onClick={this.closePan} to="/contact">Contact Me</Link>
             </li>
-
-          </ul> : null}
+          </ul>
         </nav>
 
 
