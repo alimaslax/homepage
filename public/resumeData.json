@@ -1,12 +1,11 @@
 {
   "main": {
     "name":"MASLAX ALI",
-    "description":"Backend developer who specializes in C# And Java Frameworks. This website is for me to keep all my interests in one place, and for you to learn about them",
+    "description":"Backend developer who specializes in C# And Java Frameworks. This website is for me to keep all my interests in one place, and for you free to explore.",
     "image":"profilepic.png",
     "bio":"I worked within multiple frameworks in Java, Nodejs, and C#. More lenient towards the backend side of things, but sometimes Sprints are just U.I heavy. Constantly, I find myself debugging between frameworks to find where the feature/issue should be. Takeaway from my work experience has been that scale makes Apps behave differently; both in terms of the number of devices you're supporting, and the number of API services that are coupled. Looking forward in my Career, I want to stay curious and keep people close. At the end of the day it's a team effort; from the Manager, BA, all the way to the developers. Different frameworks and libraries will always be constant. Technology moves at such breathtaking pace that it's fun trying to keep up.",
     "contactmessage":"Want to reach out?",
     "email": "alimaslax.web@gmail.com",
-    "phone": "857-220-9130",
     "github":"https://github.com/alimaslax/",
     "project":"https://www.linkedin.com/in/alimaslax/",
     "address":{
@@ -175,7 +174,7 @@
           "description": "sample-description",
           "focalPoint": [0, 0],
           "link": {
-            "url": "https://github.com/alimaslax/homepage/raw/feature/MALI-01/public/jupyter/Convolutional.pdf",
+            "url": "https://www.youtube.com/watch?v=c36lUUr864M&t=9s&ab_channel=PythonEngineer",
             "target": "_blank"
           }
         }
@@ -191,7 +190,7 @@
           "description": "sample-description",
           "focalPoint": [0, 0],
           "link": {
-            "url": "https://github.com/alimaslax/homepage/raw/feature/MALI-01/public/jupyter/Convolutional.pdf",
+            "url": "https://www.youtube.com/watch?v=7q_OJvQQ7vY&t=437s&ab_channel=TheAIEpiphany",
             "target": "_blank"
           }
         }
@@ -207,7 +206,7 @@
           "description": "sample-description",
           "focalPoint": [0, 0],
           "link": {
-            "url": "https://github.com/alimaslax/homepage/raw/feature/MALI-01/public/jupyter/Convolutional.pdf",
+            "url": "https://www.youtube.com/watch?v=aircAruvnKk&t=706s",
             "target": "_blank"
           }
         }
@@ -223,7 +222,7 @@
           "description": "sample-description",
           "focalPoint": [0, 0],
           "link": {
-            "url": "https://github.com/alimaslax/homepage/raw/feature/MALI-01/public/jupyter/Convolutional.pdf",
+            "url": "https://www.youtube.com/watch?v=yhhSYk9zt1w&t=2s&ab_channel=TheAIEpiphany",
             "target": "_blank"
           }
         }
@@ -239,7 +238,7 @@
           "description": "sample-description",
           "focalPoint": [0, 0],
           "link": {
-            "url": "https://github.com/alimaslax/homepage/raw/feature/MALI-01/public/jupyter/Convolutional.pdf",
+            "url": "https://www.youtube.com/watch?v=fNk_zzaMoSs&t=23s&ab_channel=3Blue1Brown",
             "target": "_blank"
           }
         }
@@ -255,7 +254,7 @@
           "description": "sample-description",
           "focalPoint": [0, 0],
           "link": {
-            "url": "https://github.com/alimaslax/homepage/raw/feature/MALI-01/public/jupyter/Convolutional.pdf",
+            "url": "https://www.youtube.com/watch?v=k7RM-ot2NWY&t=515s&ab_channel=3Blue1Brown",
             "target": "_blank"
           }
         }
@@ -271,7 +270,7 @@
           "description": "sample-description",
           "focalPoint": [0, 0],
           "link": {
-            "url": "https://github.com/alimaslax/homepage/raw/feature/MALI-01/public/jupyter/Convolutional.pdf",
+            "url": "https://www.youtube.com/watch?v=Z_ikDlimN6A&t=19185s&ab_channel=DanielBourke",
             "target": "_blank"
           }
         }
@@ -287,23 +286,23 @@
           "description": "sample-description",
           "focalPoint": [0, 0],
           "link": {
-            "url": "https://github.com/alimaslax/homepage/raw/feature/MALI-01/public/jupyter/Convolutional.pdf",
+            "url": "https://www.youtube.com/watch?v=IHZwWFHWa-w&ab_channel=3Blue1Brown",
             "target": "_blank"
           }
         }
       },
       {
         "itemId": "sample-id",
-        "mediaUrl": "images/portfolio/mst_networks.jpeg",
+        "mediaUrl": "images/portfolio/sebastian.jpeg",
         "metaData": {
          "type": "image",
           "height": 300,
-          "width": 600,
+          "width": 1000,
           "title": "sample-title",
           "description": "sample-description",
           "focalPoint": [0, 0],
           "link": {
-            "url": "https://github.com/alimaslax/homepage/raw/feature/MALI-01/public/jupyter/Convolutional.pdf",
+            "url": "https://www.youtube.com/watch?v=hfMk-kjRv4c&t=183s&ab_channel=SebastianLague",
             "target": "_blank"
           }
         }

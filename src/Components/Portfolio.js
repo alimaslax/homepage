@@ -1,8 +1,5 @@
 import React, { Component } from "react";
-import Zmage from "react-zmage";
 import Fade from "react-reveal";
-import Button from 'react-bootstrap/Button';
-import { ProGallery } from 'pro-gallery';
 import 'pro-gallery/dist/statics/main.css';
 
 let id = 0;
@@ -11,59 +8,18 @@ class Portfolio extends Component {
     super(props);
     this.init();
   }
+
   init() {
     // Always set the initial state in its own function, so that
     // you can trivially reset your components at any point.
     this.state = {
-      changeSize: window.innerWidth < 1000 ? 500 : 1025
+      winSize: window.innerWidth < 1000 ? 500 : 1025,
+      displayBoarder: false
     };
-    //this.setState({ changeSize: this.state.changeSize + 300 })}
+    //this.setState({ winSize: this.state.winSize + 300 })}
   }
   render() {
     if (!this.props.data) return null;
-    // Add your images here...
-
-
-    // The options of the gallery (from the playground current state)
-    const options_notes = {
-      layoutParams: {
-        structure: {
-          galleryLayout: -1,
-          scrollDirection: "HORIZONTAL",
-        },
-        groups: {
-          groupSize: 0
-        }
-
-      }
-    };
-    const container_notes = {
-      width: this.state.changeSize,
-      height: 300
-    };
-
-    const options_videos = {
-      layoutParams: {
-        structure: {
-          galleryLayout: -1,
-          enableStreching: false,
-        },
-        groups: {
-          groupSize: 1
-        }
-      }
-    };
-    // The size of the gallery container. The images will fit themselves in it
-    const container = {
-      width: this.state.changeSize,
-      height: 300
-    };
-
-    // The eventsListener will notify you anytime something has happened in the gallery.
-    const eventsListener = (eventName, eventData) => console.log({ eventName, eventData });
-
-    // The scrollingElement is usually the window, if you are scrolling inside another element, suplly it here
-    const scrollingElement = window;
 
     const projects = this.props.data.projects.map(function (projects) {
       let projectImage = "images/portfolio/" + projects.image;
@@ -85,13 +41,18 @@ class Portfolio extends Component {
               <h1>PyTorch Notes</h1>
 
               <div className="portfolio-wrapper">
-                <ProGallery
-                  items={this.props.data.notes}
-                  options={options_notes}
-                  container={container_notes}
-                  eventsListener={eventsListener}
-                  scrollingElement={scrollingElement}
-                />
+                {this.props.data.notes.map((item) => {
+                  return <div className="portfolio-item">
+                    <a href={item.metaData.link.url} target="_blank">
+                      <img
+                        src={item.mediaUrl}
+                        alt={item.metaData.description}
+                      />
+                    </a>
+                  </div>
+
+                })
+                }
               </div>
 
             </div>
@@ -102,13 +63,17 @@ class Portfolio extends Component {
                 id="portfolio-wrapper"
                 className="video-wrapper bgrid-thirds s-bgrid-thirds cf"
               >
-                <ProGallery
-                  items={this.props.data.videos}
-                  options={options_videos}
-                  container={container}
-                  eventsListener={eventsListener}
-                  scrollingElement={scrollingElement}
-                />
+                {this.props.data.videos.map((item) => {
+                  return <div className="portfolio-item">
+                    <a href={item.metaData.link.url} target="_blank">
+                      <img
+                        src={item.mediaUrl}
+                        alt={item.metaData.description}
+                      />
+                    </a>
+                  </div>
+                })
+                }
               </div>
             </div>
           </div>

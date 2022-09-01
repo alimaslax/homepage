@@ -140,7 +140,7 @@ header .scrolldown a:hover { color: #0762f9; }
 .opaque { background-color: #333; }
 
 /* hide toggle button */
-#nav-wrap > a.mobile-btn { display: none; }
+#nav-wrap > .mobile-btn { display: none; }
 
 ul#nav {
    min-height: 48px;
@@ -226,7 +226,9 @@ ul#nav li.current a { color: #fe6928; }
    margin-right: 15px;
    font-size: 20px;
 }
-
+.fa-github {
+   padding-right: 15px;
+}
 
 /* ------------------------------------------------------------------ */
 /* d. Resume Section
@@ -437,6 +439,7 @@ ul#nav li.current a { color: #fe6928; }
    border: solid #000;
    border-block-width: 10px 10px;
    background-color: #0D111D;
+   overflow: scroll;
 }
 .video-wrapper {
    width: 100%;
@@ -457,11 +460,20 @@ ul#nav li.current a { color: #fe6928; }
 	-ms-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 }
-.portfolio-item .item-wrap a {
-   display: block;
-   cursor: pointer;
+.portfolio-item {
+   float: left;
+   padding-right: 10px;
 }
-
+.portfolio-item img{
+   width: 320px;
+   height: 300px;
+}
+.portfolio-item img:hover {
+  border: solid;
+  border-color: rgb(20, 91, 135);
+  border-top: none;
+  border-bottom: none;
+}
 /* overlay */
 .portfolio-item .item-wrap .overlay {
    position: absolute;

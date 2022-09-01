@@ -157,8 +157,8 @@
    }
 
    /* display menu panels */
-	#nav-wrap:target > ul#nav	{
-	   display: block;
+	#nav-wrap > ul#nav	{
+	   display: none;
       padding: 30px 20px 48px 20px;
       background: #1f2024;
       margin: 0 30px;
@@ -256,7 +256,10 @@
    /* ----------------------------------------------------------------- */
    #portfolio-wrapper .columns { margin-bottom: 40px; }
    .popup-modal {	max-width: 85%; }
-
+   
+   .portfolio-wrapper {
+      overflow-y: scroll;
+   }
 
    /* Testimonials Section
    ----------------------------------------------------------------------- */
@@ -334,7 +337,6 @@
       font-size: 18px;
       line-height: 54px;
    }
-
 
 }
 
