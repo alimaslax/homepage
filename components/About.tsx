@@ -1,0 +1,189 @@
+import React, { useState, useEffect } from "react";
+import { animated, useSpring } from "@react-spring/web";
+import VisibilitySensor from "react-visibility-sensor";
+import ProfileCard from "./ProfileCard"; // Assuming ProfileCard is correctly imported
+
+export default function About(props) {
+  const [visible, setVisible] = useState(false);
+  const [sensorActive, setSensorActive] = useState(false);
+  useEffect(() => {
+    if (visible) {
+      setSensorActive(true);
+    }
+  }, [visible]);
+  const slideInFromBottom = useSpring({
+    from: {
+      opacity: 0,
+      transform: "translate3d(0, 100%, 0)",
+    },
+    to: {
+      opacity: 1,
+      transform: visible ? "translate3d(0, 0, 0)" : "translate3d(0, 100%, 0)",
+    },
+    config: {
+      duration: 500,
+    },
+  });
+  const fadeInFromBottom = useSpring({
+    from: {
+      opacity: 0,
+      transform: "translate3d(0, 100%, 0)",
+    },
+    to: {
+      opacity: 1,
+      transform: "translate3d(0, 0, 0)",
+    },
+    config: {
+      duration: 500,
+    },
+  });
+
+  const name = props.name;
+  const profilepic = "images/" + props.image; // Ensure this path is correct!
+  const macbookPic = "images/macbook.png"; // Ensure this path is correct!
+  const bio = props.bio;
+  const city = "Columbus"; //props.address.city;
+  const state = "Ohio"; //props.address.city; props.address.state;
+  const phone = props.phone;
+  const email = props.email;
+  const resumeDownload = props.resumedownload;
+  const project = props.project;
+  const github = props.github;
+  const description = props.description;
+
+  return (
+    <section id="about">
+      <animated.div>
+        <div className="about">
+          <div className="banner-text">
+            <animated.div style={fadeInFromBottom}>
+              <h1 className="responsive-headline">{name}</h1>
+            </animated.div>
+            <hr />
+          </div>
+
+          {/* Main content layout: Profile on left, Text on right */}
+          <div
+            className="about-main-content" // Custom class for this section
+            style={{
+              display: "flex",
+              justifyContent: "center", // Center the entire layout block
+              alignItems: "flex-start", // Align items at the top
+              gap: "40px", // Space between profile and text
+              flexWrap: "wrap", // Allow wrapping for responsiveness
+              maxWidth: "1100px", // Limit the overall width
+              margin: "0 auto", // Center the container
+              padding: "0 20px", // Add some side padding
+            }}
+          >
+            {/* Profile Card Column */}
+            <div
+              className="profile-card-wrapper" // Wrapper for the profile card
+              style={{
+                flex: "0 0 300px", // Fixed width for the profile card area
+                maxWidth: "300px", // Ensure it doesn't exceed this width
+                boxSizing: "border-box", // Include padding/border in width
+                marginRight: 100,
+              }}
+            >
+              {/* The ProfileCard component itself */}
+              <ProfileCard
+                name="" // You might want to pass the actual name here if ProfileCard uses it
+                title="Software Engineer"
+                handle="alimaslax"
+                status="Online"
+                contactText="Contact Me"
+                avatarUrl={profilepic}
+                showUserInfo={true}
+                enableTilt={true}
+                onContactClick={() => console.log("Contact clicked")}
+                behindGradient="linear-gradient(135deg, #0f2027, #203a43, #2c5364)"
+                innerGradient="linear-gradient(135deg, #0f2027, #203a43, #2c5364)"
+                showBehindGradient={true}
+              />
+            </div>
+
+            {/* Text Content Column */}
+            <div
+              className="text-content-wrapper" // Wrapper for the text content
+              style={{
+                flex: "1", // Allow this section to grow and take available space
+                minWidth: "300px", // Minimum width before wrapping
+                boxSizing: "border-box",
+              }}
+            >
+              <h2>About Me</h2>
+              <p>{description}</p>
+              <p>{bio}</p>
+
+              {/* Contact Details and Download Button */}
+              <div
+                className="contact-and-download-section"
+                style={{
+                  display: "flex",
+                  flexDirection: "column", // Stack vertically
+                  gap: "20px", // Space between elements
+                  marginTop: "20px", // Space above this section
+                }}
+              >
+                <div className="contact-details">
+                  <h2>Contact Details</h2>
+                  <p className="address">
+                    <span>{name}</span>
+                    <br />
+                    <span>
+                      {city}, {state}
+                    </span>
+                    <span>{phone}</span>
+                    <br />
+                    <span>{email}</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Social Buttons Row (remains the same) */}
+          <VisibilitySensor
+            onChange={(isVisible) => setVisible(isVisible)}
+            active={!sensorActive}
+          >
+            <div className="row social-buttons-row">
+              <animated.div style={slideInFromBottom}>
+                <ul className="social">
+                  <div className="center-align">
+                    <a
+                      href={resumeDownload}
+                      className="button btn github-btn"
+                      style={{ width: "250px", fontSize: "30px" }}
+                    >
+                      <i className="fa fa-github"></i> Resume
+                    </a>
+                  </div>
+                  <div className="center-align">
+                    <a
+                      href={github}
+                      className="button btn github-btn"
+                      style={{ width: "250px", fontSize: "30px" }}
+                    >
+                      <i className="fa fa-github"></i> Github
+                    </a>
+                  </div>
+                  <div className="center-align">
+                    <a
+                      href={project}
+                      className="button btn project-btn"
+                      style={{ width: "250px", fontSize: "30px" }}
+                    >
+                      <i className="fa fa-book"></i> LinkedIn
+                    </a>
+                  </div>
+                </ul>
+              </animated.div>
+            </div>
+          </VisibilitySensor>
+        </div>
+      </animated.div>
+    </section>
+  );
+}

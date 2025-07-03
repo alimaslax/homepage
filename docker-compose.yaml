@@ -1,0 +1,9 @@
+version: "3.7"
+services:
+  caddy:
+    container_name: "debain"
+    image: "debian:stable"
+    expose:
+      - "443"
+    volumes:
+      - ./

@@ -1,0 +1,384 @@
+{
+  "main": {
+    "name":"MASLAX ALI",
+    "description":"Backend developer who specializes in C# And Java Frameworks. This website is for me to keep all my interests in one place, and for you free to explore.",
+    "image":"profilepic.png",
+    "bio":"I worked within multiple frameworks in Java, Nodejs, and C#. More lenient towards the backend side of things, but sometimes Sprints are just U.I heavy. Constantly, I find myself debugging between frameworks to find where the feature/issue should be. Takeaway from my work experience has been that scale makes Apps behave differently; both in terms of the number of devices you're supporting, and the number of API services that are coupled. Looking forward in my Career, I want to stay curious and keep people close. At the end of the day it's a team effort; from the Manager, BA, all the way to the developers. Different frameworks and libraries will always be constant. Technology moves at such breathtaking pace that it's fun trying to keep up.",
+    "contactmessage":"Want to reach out?",
+    "email": "alimaslax.web@gmail.com",
+    "github":"https://github.com/alimaslax/",
+    "project":"https://www.linkedin.com/in/alimaslax/",
+    "address":{
+      "city":"Columbus",
+      "state":"OH"
+    },
+    "website": "http://www.timbakerdev.com",
+    "resumedownload":"alimaslax_resume.pdf",
+    "social":[
+      {
+        "name":"facebook",
+        "url":"https://www.facebook.com/maslax.ali.56",
+        "className":"fa fa-facebook"
+      },
+      {
+        "name":"twitter",
+        "url":"https://twitter.com/alimaslax",
+        "className":"fa fa-twitter"
+      },
+      {
+        "name":"linkedin",
+        "url":"https://www.linkedin.com/in/alimaslax/",
+        "className":"fa fa-linkedin"
+      },
+      {
+        "name":"instagram",
+        "url":"https://www.instagram.com/malimax614/?hl=en",
+        "className":"fa fa-instagram"
+      },
+      {
+        "name":"github",
+        "url":"https://github.com/alimaslax/",
+        "className":"fa fa-github"
+      }
+    ]
+  },
+  "resume":{
+    "skillmessage":"Knowledge base in langauges",
+    "education":[
+      {
+        "school":"University of Massachusetts Boston",
+        "degree":"B.S Computer Science (3.3)",
+        "graduated":"2016-2018",
+        "description":"Activities: SSA (Treasurer), MSA (Coordinator), 2018 Hack Diversity Alumni \nCoursework: Android Development, Database Management, Linux Operating Systems"
+      },
+      {
+        "school":"Northeastern University",
+        "degree":"Candidate B.S Computer Science (3.0)",
+        "graduated":"2012-2014",
+        "description":"Web Development, Data Structure & Algorithms"
+      }
+    ],
+    "volunteer":[
+      {
+        "org":"Hack Diversity",
+        "position":"Software Dev Mentor",
+        "dates":"2018-Present",
+        "description":"Hack.Diversity mentor and past cohort. I can attest to how life changing this program is. They gave me that first foot in the tech industry I needed. I got in, and doing my part in holding the door open for other individuals"
+      }
+    ],
+    "work":[
+      {
+        "company":"NetJets",
+        "title":"Software Developer/Analyst",
+        "years":"April 2021 - Present",
+        "description":[
+        "● Enhancing advanced Flight Reservation apps written with React and NET Core 6",
+        "● Maintaining API domain services written in Groovy Grails",
+        "● Implemented Jenkins CI/CD pipeline adhering to strict architect designed specifications", 
+        "● Used Helm Charts to deploy 4 AWS EKS clusters running in different environments", 
+        "● Protected sensitive credentials and data behind AWS param-store and secret manager", 
+        "● Ported legacy Asp.Net 4.5 backend with MVC pages to the latest Net Core 6.0", 
+        "● Built from ground up, session management, authentication/authorization middleware(s)", 
+        "● Custom ported the StackExchange.Redis library to support legacy system’s Redis state manager", 
+        "● QA testing and validation for peer reviewed work ● Living Jira documentation for application and pipeline setups"
+        ]
+      },
+      {
+        "company":"BoyleTransport",
+        "title":"Software Engineer",
+        "years":"Nov 2020 - April 2021",
+        "description":[
+          "● Maintained and enhanced production grade inventory tracking Apps in Java 8",
+          "● Ported legacy JSP App to Angular with both a Struct2 & Spring-Boot backend support",
+          "● Managed SQL tables and executed business logic queries in Struct2",
+          "● Built from ground up, session management, authentication/authorization middleware(s)"
+        ]
+      },
+      {
+        "company":"Liberty Mutual Dover",
+        "title":"Technology Associate",
+        "years":"June 2019 - Mar 2020",
+        "description":[
+          "● Composed a best practice project for a Spring-Boot RESTful app",
+          "● Used API Contract driven approach, with BDD/TDD testing",
+          "● Embedded OAuth2, Sonar, OpenAPI, Cucumber, and PMD into project",
+          "● Enhanced a document searching Angular app with new data sources",
+          "● Experienced using CI/CD build tools with Atlassian Bamboo and Git"
+        ]
+      },
+      {
+        "company":"Liberty Mutual Boston",
+        "title":"Software Engineer Intern",
+        "years":"Aug 2018 - Jan 2019",
+        "description":[
+          "● Monitored ElasticSearch, as it processed 165 million logs a day",
+          "● Used bounded context with docker compose to spin up ELK stack containers",
+          "● Built Vue.js app to register logs coming from different servers with our elastic cluster",
+          "● Gained strong familiarity with the Agile development framework"
+        ]
+      }
+    ],
+    "skills":[
+      {
+        "name":"C#",
+        "level":"90%"
+      },
+      {
+        "name":"Java",
+        "level":"85%"
+      },
+      {
+        "name":".Net Core",
+        "level":"90%"
+      },
+      {
+        "name":"Kubernetes/Helm Chart",
+        "level":"93%"
+      },
+      {
+        "name":"React",
+        "level":"65%"
+      },
+      {
+        "name":"SQL",
+        "level":"70%"
+      }
+    ]
+  },
+  "portfolio":{
+    "notes": [
+      {
+        "itemId": "sample-id",
+        "mediaUrl": "images/portfolio/convolutional.jpeg",
+        "metaData": {
+         "type": "image",
+          "height": 200,
+          "width": 200,
+          "title": "sample-title",
+          "description": "sample-description",
+          "focalPoint": [100, 100],
+          "link": {
+            "url": "https://github.com/alimaslax/homepage/raw/feature/MALI-01/public/jupyter/Convolutional.pdf",
+            "target": "_blank"
+          }
+        }
+      },
+      {
+        "itemId": "sample-id",
+        "mediaUrl": "images/portfolio/DigitClassification.jpeg",
+        "metaData": {
+         "type": "image",
+          "height": 333,
+          "width": 500,
+          "title": "sample-title",
+          "description": "sample-description",
+          "focalPoint": [0, 0],
+          "link": {
+            "url": "https://github.com/alimaslax/homepage/raw/feature/MALI-01/public/jupyter/Convolutional.pdf",
+            "target": "_blank"
+          }
+        }
+      },
+      {
+        "itemId": "sample-id",
+        "mediaUrl": "images/portfolio/FullyConnected.jpeg",
+        "metaData": {
+         "type": "image",
+          "height": 333,
+          "width": 500,
+          "title": "sample-title",
+          "description": "sample-description",
+          "focalPoint": [0, 0],
+          "link": {
+            "url": "https://github.com/alimaslax/homepage/raw/feature/MALI-01/public/jupyter/Convolutional.pdf",
+            "target": "_blank"
+          }
+        }
+      }
+    ],
+    "videos": [
+      {
+        "itemId": "sample-id",
+        "mediaUrl": "images/portfolio/pytorch.jpeg",
+        "metaData": {
+         "type": "image",
+          "height": 650,
+          "width": 1500,
+          "title": "sample-title",
+          "description": "sample-description",
+          "focalPoint": [0, 0],
+          "link": {
+            "url": "https://www.youtube.com/watch?v=c36lUUr864M&t=9s&ab_channel=PythonEngineer",
+            "target": "_blank"
+          }
+        }
+      },
+      {
+        "itemId": "sample-id",
+        "mediaUrl": "images/portfolio/learning.jpeg",
+        "metaData": {
+         "type": "image",
+          "height": 300,
+          "width": 500,
+          "title": "sample-title",
+          "description": "sample-description",
+          "focalPoint": [0, 0],
+          "link": {
+            "url": "https://www.youtube.com/watch?v=7q_OJvQQ7vY&t=437s&ab_channel=TheAIEpiphany",
+            "target": "_blank"
+          }
+        }
+      },
+      {
+        "itemId": "sample-id",
+        "mediaUrl": "images/portfolio/neural_networks.jpeg",
+        "metaData": {
+         "type": "image",
+          "height": 300,
+          "width": 500,
+          "title": "sample-title",
+          "description": "sample-description",
+          "focalPoint": [0, 0],
+          "link": {
+            "url": "https://www.youtube.com/watch?v=aircAruvnKk&t=706s",
+            "target": "_blank"
+          }
+        }
+      },
+      {
+        "itemId": "sample-id",
+        "mediaUrl": "images/portfolio/projects.jpeg",
+        "metaData": {
+         "type": "image",
+          "height": 300,
+          "width": 500,
+          "title": "sample-title",
+          "description": "sample-description",
+          "focalPoint": [0, 0],
+          "link": {
+            "url": "https://www.youtube.com/watch?v=yhhSYk9zt1w&t=2s&ab_channel=TheAIEpiphany",
+            "target": "_blank"
+          }
+        }
+      },
+      {
+        "itemId": "sample-id",
+        "mediaUrl": "images/portfolio/vectors.jpeg",
+        "metaData": {
+         "type": "image",
+          "height": 300,
+          "width": 500,
+          "title": "sample-title",
+          "description": "sample-description",
+          "focalPoint": [0, 0],
+          "link": {
+            "url": "https://www.youtube.com/watch?v=fNk_zzaMoSs&t=23s&ab_channel=3Blue1Brown",
+            "target": "_blank"
+          }
+        }
+      },
+      {
+        "itemId": "sample-id",
+        "mediaUrl": "images/portfolio/vectors2.jpeg",
+        "metaData": {
+         "type": "image",
+          "height": 300,
+          "width": 500,
+          "title": "sample-title",
+          "description": "sample-description",
+          "focalPoint": [0, 0],
+          "link": {
+            "url": "https://www.youtube.com/watch?v=k7RM-ot2NWY&t=515s&ab_channel=3Blue1Brown",
+            "target": "_blank"
+          }
+        }
+      },
+      {
+        "itemId": "sample-id",
+        "mediaUrl": "images/portfolio/full_day_pytorch.jpeg",
+        "metaData": {
+         "type": "image",
+          "height": 300,
+          "width": 600,
+          "title": "sample-title",
+          "description": "sample-description",
+          "focalPoint": [0, 0],
+          "link": {
+            "url": "https://www.youtube.com/watch?v=Z_ikDlimN6A&t=19185s&ab_channel=DanielBourke",
+            "target": "_blank"
+          }
+        }
+      },
+      {
+        "itemId": "sample-id",
+        "mediaUrl": "images/portfolio/gradients.jpeg",
+        "metaData": {
+         "type": "image",
+          "height": 300,
+          "width": 1000,
+          "title": "sample-title",
+          "description": "sample-description",
+          "focalPoint": [0, 0],
+          "link": {
+            "url": "https://www.youtube.com/watch?v=IHZwWFHWa-w&ab_channel=3Blue1Brown",
+            "target": "_blank"
+          }
+        }
+      },
+      {
+        "itemId": "sample-id",
+        "mediaUrl": "images/portfolio/sebastian.jpeg",
+        "metaData": {
+         "type": "image",
+          "height": 300,
+          "width": 1000,
+          "title": "sample-title",
+          "description": "sample-description",
+          "focalPoint": [0, 0],
+          "link": {
+            "url": "https://www.youtube.com/watch?v=hfMk-kjRv4c&t=183s&ab_channel=SebastianLague",
+            "target": "_blank"
+          }
+        }
+      }
+    ],
+    "projects": [
+      {
+        "title":"NetJets",
+        "category":"Largest Private Aviation Company",
+        "image":"01.jpg",
+        "url":"https://www.netjets.com"
+      },
+      {
+        "title":"Boyle Security Transportation",
+        "category":"Medicine Logistics Company",
+        "image":"02.jpg",
+        "url":"http://wwww.boyletransport.com/"
+      },
+      {
+        "title":"Liberty Mutual",
+        "category":"3rd Largest Insurance Company",
+        "image":"03.jpg",
+        "url":"http://www.libertymutual.com/"
+      },
+      {
+        "title":"PCM",
+        "category":"A Division That Provides Technology and IT products",
+        "image":"04.jpg",
+        "url":"https://www.insight.com/"
+      },
+      {
+        "title":"Arrow Electronics",
+        "category":"Electronic Component Products, Datasheets, Reference Designs Technology",
+        "image":"05.jpg",
+        "url":"https://www.arrow.com/"
+      },
+      {
+        "title":"Sasaki Associates",
+        "category":"Interdisciplinary Architecture, Planning, Landscape, and Design Firm",
+        "image":"06.jpg",
+        "url":"https://www.sasaki.com/"
+      }
+    ]
+  }
+}
