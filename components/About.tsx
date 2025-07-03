@@ -67,9 +67,7 @@ export default function About(props) {
               showUserInfo={true}
               enableTilt={true}
               onContactClick={() => console.log("Contact clicked")}
-              behindGradient="linear-gradient(135deg, #0f2027, #203a43, #2c5364)"
-              innerGradient="linear-gradient(135deg, #0f2027, #203a43, #2c5364)"
-              showBehindGradient={true}
+              showBehindGradient={false}
             />
           </div>
 
