@@ -1,20 +1,6 @@
 import React from "react";
-import { animated, useSpring } from "@react-spring/web";
 
 export default function Resume(props) {
-  const slideInFromLeft = useSpring({
-    from: {
-      opacity: 0,
-      transform: "translate3d(-100%, 0, 0)",
-    },
-    to: {
-      opacity: 1,
-      transform: "translate3d(0, 0, 0)",
-    },
-    config: {
-      duration: 800,
-    },
-  });
 
   if (!props) return null;
   let count = 0;
@@ -84,67 +70,59 @@ export default function Resume(props) {
 
   return (
     <section id="resume">
-      <animated.div style={slideInFromLeft}>
-        <div className="row education">
-          <div className="three columns header-col">
-            <h1>
-              <span>Education</span>
-            </h1>
-          </div>
+      <div className="row education">
+        <div className="three columns header-col">
+          <h1>
+            <span>Education</span>
+          </h1>
+        </div>
 
-          <div className="nine columns main-col">
-            <div className="row item">
-              <div className="twelve columns">{education}</div>
-            </div>
+        <div className="nine columns main-col">
+          <div className="row item">
+            <div className="twelve columns">{education}</div>
           </div>
         </div>
-      </animated.div>
+      </div>
 
-      <animated.div style={slideInFromLeft}>
-        <div className="row education">
-          <div className="three columns header-col">
-            <h1>
-              <span>Volunteer</span>
-            </h1>
-          </div>
+      <div className="row education">
+        <div className="three columns header-col">
+          <h1>
+            <span>Volunteer</span>
+          </h1>
+        </div>
 
-          <div className="nine columns main-col">
-            <div className="row item">
-              <div className="twelve columns">{volunteer}</div>
-            </div>
+        <div className="nine columns main-col">
+          <div className="row item">
+            <div className="twelve columns">{volunteer}</div>
           </div>
         </div>
-      </animated.div>
+      </div>
 
-      <animated.div style={slideInFromLeft}>
-        <div className="row work">
-          <div className="three columns header-col">
-            <h1>
-              <span>Work</span>
-            </h1>
-          </div>
-
-          <div className="nine columns main-col">{work}</div>
+      <div className="row work">
+        <div className="three columns header-col">
+          <h1>
+            <span>Work</span>
+          </h1>
         </div>
-      </animated.div>
 
-      <animated.div style={slideInFromLeft}>
-        <div className="row skill">
-          <div className="three columns header-col">
-            <h1>
-              <span>Skills</span>
-            </h1>
-          </div>
+        <div className="nine columns main-col">{work}</div>
+      </div>
 
-          <div className="nine columns main-col">
-            <p>{skillmessage}</p>
+      <div className="row skill">
+        <div className="three columns header-col">
+          <h1>
+            <span>Skills</span>
+          </h1>
+        </div>
 
-            <div className="bars">
-              <ul className="skills">{skills}</ul>
-            </div>
+        <div className="nine columns main-col">
+          <p>{skillmessage}</p>
+
+          <div className="bars">
+            <ul className="skills">{skills}</ul>
           </div>
         </div>
-      </animated.div>
+      </div>
     </section>
   );
 }

@@ -1,27 +1,11 @@
 import React, { useState } from "react";
-import { animated, useSpring } from "@react-spring/web";
 import { signIn, signOut, useSession } from "next-auth/react";
 
 let id = 0;
 
 export default function Notebook(props) {
-  const [winSize, setWinSize] = useState(1024 < 1000 ? 500 : 1025);
-  const [displayBoarder, setDisplayBoarder] = useState(false);
   const { data: session } = useSession();
 
-  const slideInFromBottom = useSpring({
-    from: {
-      opacity: 0,
-      transform: "translate3d(0, 100%, 0)",
-    },
-    to: {
-      opacity: 1,
-      transform: "translate3d(0, 0, 0)",
-    },
-    config: {
-      duration: 500,
-    },
-  });
   let button;
   if (!props) return null;
   const projects = props.projects.map(function (projects) {
@@ -50,7 +34,6 @@ export default function Notebook(props) {
   }
   return (
     <section id="portfolio">
-      <animated.div style={slideInFromBottom}>
         {}
         <div className="row">
           <div className="twelve columns collapsed">
@@ -94,7 +77,6 @@ export default function Notebook(props) {
             </div>
           </div>
         </div>
-      </animated.div>
 
         <div className="portfolio-container">{button}</div>
     </section>

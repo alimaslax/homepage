@@ -42,7 +42,6 @@
     "react-redux": "8.0.5",
     "react-router-dom": "^6.6.1",
     "react-scripts": "5.0.1",
-    "react-spring": "^9.6.1",
     "react-visibility-sensor": "5.1.1",
     "react-zmage": "^0.8.5-beta.37",
     "request": "^2.88.2",
