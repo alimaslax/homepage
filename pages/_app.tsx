@@ -8,9 +8,9 @@ import "../styles/css/magnific-popup.css";
 import "../styles/css/profile-card.css";
 
 import Header from "../components/Header";
-import { Provider } from "react-redux";
 import { Analytics } from "@vercel/analytics/react";
 import type { AppContext, AppProps } from "next/app";
+import { SessionProvider } from "next-auth/react";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   const activeLink = {
@@ -18,11 +18,11 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   };
 
   return (
-    <>
+    <SessionProvider>
       <Header {...activeLink} />
       <Component {...pageProps} />
       <Analytics />
-    </>
+    </SessionProvider>
   );
 }
 

@@ -37,13 +37,13 @@ export default function Notebook(props) {
   });
   if (session) {
     button = (
-      <button className="btn btn-secondary popup-modal" onClick={signOut}>
+      <button className="btn btn-secondary popup-modal" onClick={()=> signOut}>
         Logout
       </button>
     );
   } else {
     button = (
-      <button className="btn btn-primary popup-modal" onClick={signIn}>
+      <button className="btn btn-primary popup-modal" onClick={() => signIn}>
         Login
       </button>
     );
