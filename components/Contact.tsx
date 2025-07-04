@@ -89,12 +89,6 @@ export default function Contact(props) {
   }, []);
 
   if (!props) return null;
-  const name = profile.name ? profile.name : "Developer";
-  const city = profile.address?.city;
-  const state = profile.address?.state;
-  const phone = profile.phone;
-  const message = profile.contactmessage;
-
   return (
     <section id="contact">
       <div>
@@ -106,7 +100,7 @@ export default function Contact(props) {
           </div>
 
           <div className="ten columns">
-            <p className="lead">{message}</p>
+            <p className="lead">{"Get In Touch"}</p>
           </div>
         </div>
       </div>
@@ -209,9 +203,7 @@ export default function Contact(props) {
             <div className="widget widget_contact">
               <h4>Location</h4>
               <p className="address">
-                {city}, {state}
-                <br />
-                <span>{phone}</span>
+                {'Columbus'}, {'Ohio'}
               </p>
             </div>
 
