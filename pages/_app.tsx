@@ -6,6 +6,7 @@ import "../styles/css/layout.css";
 import "../styles/css/media-queries.css";
 import "../styles/css/magnific-popup.css";
 import "../styles/css/profile-card.css";
+import "../styles/css/threads.css";
 
 import Header from "../components/Header";
 import { Analytics } from "@vercel/analytics/react";

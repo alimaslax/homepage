@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import VisibilitySensor from "react-visibility-sensor";
 import ProfileCard from "./ProfileCard"; // Assuming ProfileCard is correctly imported
+import Threads from "./Threads";
 
 export default function About(props) {
   const [visible, setVisible] = useState(false);
@@ -28,6 +29,13 @@ export default function About(props) {
     <section id="about">
       <div className="about">
         <div className="banner-text">
+          <div style={{ height: "600px", width:'100%', top: -200, position: "absolute" }}>
+            <Threads
+              amplitude={1}
+              distance={0}
+              enableMouseInteraction
+            />
+          </div>
           <h1 className="responsive-headline">{name}</h1>
           <hr />
         </div>
@@ -64,7 +72,7 @@ export default function About(props) {
               status="Online"
               contactText="Contact Me"
               avatarUrl={profilepic}
-              showUserInfo={true}
+              showUserInfo={false}
               enableTilt={true}
               onContactClick={() => console.log("Contact clicked")}
               showBehindGradient={false}
@@ -110,44 +118,6 @@ export default function About(props) {
             </div>
           </div>
         </div>
-
-        {/* Social Buttons Row (remains the same) */}
-        <VisibilitySensor
-          onChange={(isVisible) => setVisible(isVisible)}
-          active={!sensorActive}
-        >
-          <div className="row social-buttons-row">
-            <ul className="social">
-              <div className="center-align">
-                <a
-                  href={resumeDownload}
-                  className="button btn github-btn"
-                  style={{ width: "250px", fontSize: "30px" }}
-                >
-                  <i className="fa fa-github"></i> Resume
-                </a>
-              </div>
-              <div className="center-align">
-                <a
-                  href={github}
-                  className="button btn github-btn"
-                  style={{ width: "250px", fontSize: "30px" }}
-                >
-                  <i className="fa fa-github"></i> Github
-                </a>
-              </div>
-              <div className="center-align">
-                <a
-                  href={project}
-                  className="button btn project-btn"
-                  style={{ width: "250px", fontSize: "30px" }}
-                >
-                  <i className="fa fa-book"></i> LinkedIn
-                </a>
-              </div>
-            </ul>
-          </div>
-        </VisibilitySensor>
       </div>
     </section>
   );

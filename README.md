@@ -87,3 +87,8 @@ https://url.com
 
 
 =======
+
+
+## Components
+https://reactbits.dev/components/profile-card
+https://reactbits.dev/backgrounds/threads
