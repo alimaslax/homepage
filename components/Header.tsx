@@ -5,9 +5,8 @@ import useSiteStore from "../store/useSiteStore";
 function Header(props) {
   const [navBottom, setNavBottom] = useState(false);
   const [reloaded, setReloaded] = useState(false);
-  const [activeLink, setActiveLink] = useState("Home");
   const [isMobile, setIsMobile] = useState(false);
-  const { PanOpen, togglePan } = useSiteStore();
+  const { PanOpen, togglePan, activeLink, setActiveLink } = useSiteStore();
 
 
   const isActive = (divName) => {
