@@ -1,0 +1,201 @@
+{
+    "projects": [
+        {
+            "id": "horizon",
+            "title": "Horizon",
+            "subtitle": "Electron Browser App",
+            "date": "Nov 2025 — Feb 2026",
+            "tagline": "Chromium-based browser native to macOS with deep system integration",
+            "tags": [
+                "Electron",
+                "Swift",
+                "TypeScript",
+                "Chromium",
+                "macOS"
+            ],
+            "github": null,
+            "description": [
+                "Chromium based browser native to macOS with deep system integration.",
+                "Bridges Chromium Embedded Framework to TypeScript through Swift.",
+                "Support for Chrome V3 extensions."
+            ],
+            "architecture": {
+                "title": "The Native Bridge",
+                "summary": "Two distinct ecosystems living side-by-side that do not speak the same language — Node.js/Electron (the consumer) and Native macOS (the producer).",
+                "layers": [
+                    {
+                        "name": "Native Core",
+                        "detail": "A standard macOS Framework project in pure Swift and Objective-C. Handles all OS-level logic — window styles, Spotlight search, system interactions. Knows nothing about Node.js or V8."
+                    },
+                    {
+                        "name": "The Glue (swift_addon.mm)",
+                        "detail": "Objective-C++ translation layer. Imports <napi.h> to talk to JS, and imports <Horizon/SwiftBridge.h> to talk to Swift."
+                    },
+                    {
+                        "name": "The Builder (binding.gyp)",
+                        "detail": "Tells the compiler to build the glue file and link it against the compiled Horizon.framework."
+                    }
+                ],
+                "dataFlow": "JavaScript → Napi::String (V8) → std::string (C++) → NSString (Obj-C) → Swift → NSString → const char* → Napi::String → JavaScript. The connection relies almost entirely on Strings — the 'Dumb Pipe' pattern."
+            }
+        },
+        {
+            "id": "good-burger",
+            "title": "GoodBurger",
+            "subtitle": "Food Ordering App",
+            "date": "2025",
+            "tagline": "Full-stack food ordering application with frontend caching and multi-entity database",
+            "tags": [
+                "React",
+                "TypeScript",
+                "Database",
+                "Caching",
+                "Full-Stack"
+            ],
+            "github": "https://github.com/alimaslax/good-burger",
+            "description": [
+                "A full-stack food ordering application.",
+                "Frontend caching for performance.",
+                "Database with 4+ entities.",
+                "Complete build pipeline with yarn dev/build/preview."
+            ],
+            "architecture": null
+        },
+        {
+            "id": "ffn-app",
+            "title": "FFN App",
+            "subtitle": "Expo Finance, Fitness & Nutrition",
+            "date": "Feb 2026 — Present",
+            "tagline": "Cross-platform finance, fitness, and nutrition app for iOS/Android/Web",
+            "tags": [
+                "Expo",
+                "React Native",
+                "iOS",
+                "Android",
+                "TypeScript"
+            ],
+            "github": "https://github.com/lewenberg/focus-app",
+            "images": [
+                "/images/projects/focus1.png",
+                "/images/projects/focus2.png",
+                "/images/projects/focus3.png",
+                "/images/projects/focus4.png",
+                "/images/projects/focus5.png"
+            ],
+            "description": [
+                "Finance, fitness, and nutrition app using Expo for iOS/Android/Web.",
+                "Native-first designed with shared components and multi-breakpoint support.",
+                "Production grade architecture with providers, caching, linting, and notifications."
+            ],
+            "architecture": null
+        },
+        {
+            "id": "ledger-mcp",
+            "title": "Banking Ledger",
+            "subtitle": "MCP Server",
+            "date": "2025 — Present",
+            "tagline": "Model Context Protocol server for deterministic banking and brokerage workflows",
+            "tags": [
+                "MCP",
+                "TypeScript",
+                "Playwright",
+                "Banking",
+                "Automation"
+            ],
+            "github": "https://github.com/alimaslax/ledger-mcp",
+            "images": [
+                "/images/projects/chrome-extention.png"
+            ],
+            "description": [
+                "Model Context Protocol server for deterministic banking and brokerage workflows.",
+                "AI clients only see high-level financial institution tools — raw browser automation lives under src/utils.",
+                "Supports Bank of America and Fidelity with full login, account listing, transaction views, and statement access.",
+                "Uses persistent Playwright browser profiles so session data survives across calls."
+            ],
+            "architecture": {
+                "title": "MCP Architecture",
+                "summary": "The server surface is kept small, predictable, and safe to grow. Implementation capabilities are internal utilities, not public MCP tools.",
+                "layers": [
+                    {
+                        "name": "src/tools/",
+                        "detail": "MCP-facing institution tool definitions. What the AI can call."
+                    },
+                    {
+                        "name": "src/utils/browser/",
+                        "detail": "Internal Playwright runtime — ensureBrowser, navigate, click, fill, screenshot, getVisibleText."
+                    },
+                    {
+                        "name": "src/utils/api/",
+                        "detail": "Internal HTTP request functions for deterministic server-side workflows."
+                    },
+                    {
+                        "name": "toolHandler.ts",
+                        "detail": "MCP call dispatcher that resolves tools to configured bank/action routes."
+                    }
+                ],
+                "dataFlow": "MCP Client → high-level tool (e.g. bank_of_america_view_transactions) → toolHandler resolves route → bank runtime calls browser utilities in deterministic sequence → AI receives only the result."
+            }
+        },
+        {
+            "id": "vits-svc",
+            "title": "VITS SVC Data Collector",
+            "subtitle": "Audio Processing Pipeline",
+            "date": "2024",
+            "tagline": "Workflow for processing audio from your favorite artists",
+            "tags": [
+                "Python",
+                "Audio",
+                "ML",
+                "Data Pipeline"
+            ],
+            "github": "https://github.com/alimaslax/vits-svc-data-collector",
+            "description": [
+                "Automated workflow for processing audio from your favorite artists.",
+                "Handles audio segmentation, cleaning, and formatting for voice model training.",
+                "Designed for VITS-SVC voice conversion pipelines."
+            ],
+            "architecture": null
+        },
+        {
+            "id": "somali-tts",
+            "title": "Somali TTS Dataset",
+            "subtitle": "Whisper-based Speech Dataset",
+            "date": "2024",
+            "tagline": "Curated Somali text-to-speech dataset with a clean processing pipeline",
+            "tags": [
+                "Whisper",
+                "TTS",
+                "HuggingFace",
+                "Somali",
+                "ML"
+            ],
+            "github": "https://huggingface.co/datasets/lewenberg/somali-tts",
+            "description": [
+                "Whisper-based Somali TTS dataset.",
+                "Curated and clean pipeline for data collection and processing.",
+                "Published dataset on HuggingFace for community use."
+            ],
+            "architecture": null
+        },
+        {
+            "id": "typeless-os",
+            "title": "typelessOS",
+            "subtitle": "Effortless macOS Experience",
+            "date": "2025",
+            "tagline": "Multi-layered macOS application for a seamless AI and terminal experience",
+            "tags": [
+                "macOS",
+                "Swift",
+                "AI",
+                "Terminal"
+            ],
+            "github": "https://github.com/alimaslax/typelessOS",
+            "description": [
+                "Multi-layered macOS application where different windows interact to provide a seamless AI and terminal experience.",
+                "Designed for an effortless macOS workflow.",
+                "Native Swift application with deep system integration."
+            ],
+            "architecture": null
+        }
+    ]
+}

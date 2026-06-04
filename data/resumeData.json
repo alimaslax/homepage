@@ -63,22 +63,31 @@
     "work": [
       {
         "company": "NetJets",
-        "title": "Software Developer/Analyst",
-        "years": "April 2021 - Present",
+        "title": "Software Developer",
+        "years": "Jan 2026 - Present",
         "description": [
-          "● Built a greenfield enterprise Expo app for private jet travel on iOS, Android, and Web",
+          "● Enhancing ETM 2.0 (React Vite) with the NetJets Atheneum design system",
+          "● AWS Gateway backend with capability-separated Lambda endpoints",
+          "● Migrated old Jenkins pipelines as Spacelift managed resources (Terraform, secret rotations, tagging)",
+          "● Legacy IJET reservation-screen enhancements, compiling its DLLs and running IJet locally",
+          "● On-call prod support for ETM and 40+ other microservices"
+        ]
+      },
+      {
+        "company": "NetJets",
+        "title": "Software Developer",
+        "years": "April 2021 - Jan 2026",
+        "description": [
+          "● Greenfield enterprise Expo app for private jet travel on iOS, Android, and Web",
           "● Made React Native components based on Figma specs using atomic design principles",
           "● Implemented push notifications, calendar sync, biometrics, and support email",
           "● Prototyped features in Storyboard before production rollout",
           "● Wrote Appium automated regression tests on on-prem Mac Studio M2",
           "● Updated production Oracle table relations with new Aircrafts using SQL",
-          "● Maintained and extended backend services written in Groovy Grails",
-          "● Deployed 4 isolated AWS EKS apps using Helm Charts",
           "● Secured credentials with AWS param-store & secret manager",
           "● Migrated legacy ASP.NET 4.5 MVC apps to .NET 6, modernizing APIs and UI flows",
           "● Developed custom .NET Core middleware for session management and authentication",
-          "● Provided on-call support through PagerDuty, Datadog, and Jira Support",
-          "● Performed QA validation for peer-reviewed code before releases"
+          "● Provided on-call support through PagerDuty, Datadog, and Jira Support"
         ]
       },
       {
@@ -117,28 +126,28 @@
     ],
     "skills": [
       {
+        "name": "React / Vite",
+        "level": "92%"
+      },
+      {
         "name": "React-Native / Expo",
         "level": "90%"
+      },
+      {
+        "name": "AWS (Lambda, Gateway, EKS)",
+        "level": "88%"
+      },
+      {
+        "name": "Terraform / Spacelift",
+        "level": "85%"
       },
       {
         "name": ".NET",
         "level": "85%"
       },
       {
-        "name": "React",
-        "level": "90%"
-      },
-      {
-        "name": "Kubernetes / Helm Chart",
-        "level": "93%"
-      },
-      {
-        "name": "Groovy",
-        "level": "88%"
-      },
-      {
         "name": "SQL",
-        "level": "70%"
+        "level": "80%"
       }
     ]
   },
@@ -153,7 +162,10 @@
           "width": 200,
           "title": "sample-title",
           "description": "sample-description",
-          "focalPoint": [100, 100],
+          "focalPoint": [
+            100,
+            100
+          ],
           "link": {
             "url": "https://github.com/alimaslax/homepage/raw/feature/MALI-01/public/jupyter/Convolutional.pdf",
             "target": "_blank"
@@ -169,7 +181,10 @@
           "width": 500,
           "title": "sample-title",
           "description": "sample-description",
-          "focalPoint": [0, 0],
+          "focalPoint": [
+            0,
+            0
+          ],
           "link": {
             "url": "https://github.com/alimaslax/homepage/raw/feature/MALI-01/public/jupyter/Convolutional.pdf",
             "target": "_blank"
@@ -185,7 +200,10 @@
           "width": 500,
           "title": "sample-title",
           "description": "sample-description",
-          "focalPoint": [0, 0],
+          "focalPoint": [
+            0,
+            0
+          ],
           "link": {
             "url": "https://github.com/alimaslax/homepage/raw/feature/MALI-01/public/jupyter/Convolutional.pdf",
             "target": "_blank"
@@ -203,7 +221,10 @@
           "width": 1500,
           "title": "sample-title",
           "description": "sample-description",
-          "focalPoint": [0, 0],
+          "focalPoint": [
+            0,
+            0
+          ],
           "link": {
             "url": "https://www.youtube.com/watch?v=c36lUUr864M&t=9s&ab_channel=PythonEngineer",
             "target": "_blank"
@@ -219,7 +240,10 @@
           "width": 500,
           "title": "sample-title",
           "description": "sample-description",
-          "focalPoint": [0, 0],
+          "focalPoint": [
+            0,
+            0
+          ],
           "link": {
             "url": "https://www.youtube.com/watch?v=7q_OJvQQ7vY&t=437s&ab_channel=TheAIEpiphany",
             "target": "_blank"
@@ -235,7 +259,10 @@
           "width": 500,
           "title": "sample-title",
           "description": "sample-description",
-          "focalPoint": [0, 0],
+          "focalPoint": [
+            0,
+            0
+          ],
           "link": {
             "url": "https://www.youtube.com/watch?v=aircAruvnKk&t=706s",
             "target": "_blank"
@@ -251,7 +278,10 @@
           "width": 500,
           "title": "sample-title",
           "description": "sample-description",
-          "focalPoint": [0, 0],
+          "focalPoint": [
+            0,
+            0
+          ],
           "link": {
             "url": "https://www.youtube.com/watch?v=yhhSYk9zt1w&t=2s&ab_channel=TheAIEpiphany",
             "target": "_blank"
@@ -267,7 +297,10 @@
           "width": 500,
           "title": "sample-title",
           "description": "sample-description",
-          "focalPoint": [0, 0],
+          "focalPoint": [
+            0,
+            0
+          ],
           "link": {
             "url": "https://www.youtube.com/watch?v=fNk_zzaMoSs&t=23s&ab_channel=3Blue1Brown",
             "target": "_blank"
@@ -283,7 +316,10 @@
           "width": 500,
           "title": "sample-title",
           "description": "sample-description",
-          "focalPoint": [0, 0],
+          "focalPoint": [
+            0,
+            0
+          ],
           "link": {
             "url": "https://www.youtube.com/watch?v=k7RM-ot2NWY&t=515s&ab_channel=3Blue1Brown",
             "target": "_blank"
@@ -299,7 +335,10 @@
           "width": 600,
           "title": "sample-title",
           "description": "sample-description",
-          "focalPoint": [0, 0],
+          "focalPoint": [
+            0,
+            0
+          ],
           "link": {
             "url": "https://www.youtube.com/watch?v=Z_ikDlimN6A&t=19185s&ab_channel=DanielBourke",
             "target": "_blank"
@@ -315,7 +354,10 @@
           "width": 1000,
           "title": "sample-title",
           "description": "sample-description",
-          "focalPoint": [0, 0],
+          "focalPoint": [
+            0,
+            0
+          ],
           "link": {
             "url": "https://www.youtube.com/watch?v=IHZwWFHWa-w&ab_channel=3Blue1Brown",
             "target": "_blank"
@@ -331,7 +373,10 @@
           "width": 1000,
           "title": "sample-title",
           "description": "sample-description",
-          "focalPoint": [0, 0],
+          "focalPoint": [
+            0,
+            0
+          ],
           "link": {
             "url": "https://www.youtube.com/watch?v=hfMk-kjRv4c&t=183s&ab_channel=SebastianLague",
             "target": "_blank"

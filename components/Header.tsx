@@ -90,6 +90,20 @@ function Header(props) {
             </Link>
           </li>
 
+          <li className={isActive("Projects")}>
+            <Link
+              href="/projects"
+              onClick={() => {
+                setActiveLink("Projects");
+                if (isMobile){
+                  togglePan();
+                }
+              }}
+            >
+              Projects
+            </Link>
+          </li>
+
           <li className={isActive("Notebook")}>
             <Link
               href="/notebook"
