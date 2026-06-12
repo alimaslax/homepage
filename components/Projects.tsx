@@ -20,6 +20,7 @@ interface Project {
   tagline: string;
   tags: string[];
   github: string | null;
+  website?: string | null;
   images?: string[];
   description: string[];
   architecture: Architecture | null;
@@ -166,6 +167,18 @@ export default function Projects({ projects }: ProjectsProps) {
                     <i className="fa fa-github" />
                     Request Access
                   </a>
+                  {project.website && (
+                    <a
+                      href={project.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-github-btn"
+                      style={{ marginLeft: "12px" }}
+                    >
+                      <i className="fa fa-external-link" />
+                      View App
+                    </a>
+                  )}
                 </div>
               )}
             </div>

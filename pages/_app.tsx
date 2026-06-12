@@ -8,6 +8,7 @@ import "../styles/css/magnific-popup.css";
 import "../styles/css/profile-card.css";
 import "../styles/css/threads.css";
 import "../styles/css/projects.css";
+import "../styles/css/focus.css";
 
 import Header from "../components/Header";
 import { Analytics } from "@vercel/analytics/react";

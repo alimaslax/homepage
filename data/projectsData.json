@@ -62,19 +62,20 @@
             "architecture": null
         },
         {
-            "id": "ffn-app",
-            "title": "FFN App",
-            "subtitle": "Expo Finance, Fitness & Nutrition",
+            "id": "focus-app",
+            "title": "Focus",
+            "subtitle": "Budgeting & Accounting App",
             "date": "Feb 2026 — Present",
-            "tagline": "Cross-platform finance, fitness, and nutrition app for iOS/Android/Web",
+            "tagline": "Personal budgeting and accounting app — track spending, manage accounts, and stay on top of your finances",
             "tags": [
                 "Expo",
                 "React Native",
-                "iOS",
-                "Android",
+                "Supabase",
+                "Plaid",
                 "TypeScript"
             ],
             "github": "https://github.com/lewenberg/focus-app",
+            "website": "https://alimaslax.com/focus",
             "images": [
                 "/images/projects/focus1.png",
                 "/images/projects/focus2.png",
@@ -83,9 +84,10 @@
                 "/images/projects/focus5.png"
             ],
             "description": [
-                "Finance, fitness, and nutrition app using Expo for iOS/Android/Web.",
-                "Native-first designed with shared components and multi-breakpoint support.",
-                "Production grade architecture with providers, caching, linting, and notifications."
+                "Personal budgeting and accounting app built with Expo for iOS, Android, and Web.",
+                "Connect financial accounts securely through Plaid for real-time balance and transaction tracking.",
+                "Privacy-first design — data is never sold, never leaves the platform, and is deleted after 180 days of inactivity.",
+                "Production grade architecture with Supabase auth, row-level security, and encrypted data at rest."
             ],
             "architecture": null
         },

@@ -1,0 +1,467 @@
+/* ------------------------------------------------------------------ */
+/* Focus App Landing Page & Privacy Policy
+/* ------------------------------------------------------------------ */
+
+.focus-page {
+  min-height: 100vh;
+  background: #0a0a0a;
+  color: #f5f5f5;
+  font-family:
+    "opensans-regular",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.focus-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 60px 24px;
+  text-align: center;
+  position: relative;
+}
+
+.focus-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    rgba(99, 102, 241, 0.12) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.focus-app-icon {
+  width: 96px;
+  height: 96px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+  box-shadow: 0 20px 60px rgba(99, 102, 241, 0.3);
+}
+
+.focus-app-icon svg {
+  width: 48px;
+  height: 48px;
+  color: #fff;
+}
+
+.focus-hero h1 {
+  font-size: 56px;
+  font-family: "opensans-bold", sans-serif;
+  color: #ffffff;
+  margin-bottom: 16px;
+  letter-spacing: -1.5px;
+}
+
+.focus-hero .tagline {
+  font-size: 20px;
+  color: #a1a1aa;
+  max-width: 500px;
+  margin: 0 auto 48px;
+  line-height: 1.6;
+}
+
+.focus-download-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.focus-store-badge {
+  display: inline-block;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.focus-store-badge:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.focus-store-badge img {
+  height: 56px;
+  width: auto;
+}
+
+.focus-qr-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.focus-qr-container p {
+  font-size: 13px;
+  color: #71717a;
+  margin: 0;
+}
+
+.focus-qr-code {
+  width: 140px;
+  height: 140px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.focus-qr-code svg,
+.focus-qr-code img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Features Section */
+.focus-features {
+  padding: 100px 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.focus-features h2 {
+  font-size: 36px;
+  font-family: "opensans-bold", sans-serif;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.focus-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+.focus-feature-card {
+  background: #18181b;
+  border: 1px solid #27272a;
+  border-radius: 16px;
+  padding: 32px;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.focus-feature-card:hover {
+  border-color: #6366f1;
+  transform: translateY(-2px);
+}
+
+.focus-feature-card .feature-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(99, 102, 241, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.focus-feature-card h3 {
+  font-size: 18px;
+  font-family: "opensans-bold", sans-serif;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.focus-feature-card p {
+  font-size: 14px;
+  color: #a1a1aa;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Screenshots Section */
+.focus-screenshots {
+  padding: 80px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.focus-screenshots h2 {
+  font-size: 36px;
+  font-family: "opensans-bold", sans-serif;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.focus-screenshots-scroll {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px 0;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.focus-screenshots-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.focus-screenshots-scroll::-webkit-scrollbar-track {
+  background: #27272a;
+  border-radius: 3px;
+}
+
+.focus-screenshots-scroll::-webkit-scrollbar-thumb {
+  background: #52525b;
+  border-radius: 3px;
+}
+
+.focus-screenshot-item {
+  flex: 0 0 auto;
+  width: 220px;
+  scroll-snap-align: start;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #27272a;
+  transition: transform 0.2s ease;
+}
+
+.focus-screenshot-item:hover {
+  transform: scale(1.02);
+}
+
+.focus-screenshot-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Privacy Highlight */
+.focus-privacy-section {
+  padding: 100px 24px;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.focus-privacy-section h2 {
+  font-size: 36px;
+  font-family: "opensans-bold", sans-serif;
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+
+.focus-privacy-section .privacy-subtitle {
+  font-size: 16px;
+  color: #a1a1aa;
+  margin-bottom: 48px;
+  line-height: 1.6;
+}
+
+.focus-privacy-points {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+
+.focus-privacy-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 24px;
+  background: #18181b;
+  border: 1px solid #27272a;
+  border-radius: 12px;
+}
+
+.focus-privacy-point .point-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(34, 197, 94, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.focus-privacy-point p {
+  font-size: 15px;
+  color: #d4d4d8;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.focus-privacy-link {
+  display: inline-block;
+  margin-top: 40px;
+  color: #6366f1;
+  font-size: 14px;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.focus-privacy-link:hover {
+  border-color: #6366f1;
+  color: #6366f1;
+}
+
+/* Footer */
+.focus-footer {
+  padding: 48px 24px;
+  text-align: center;
+  border-top: 1px solid #1f1f23;
+}
+
+.focus-footer p {
+  font-size: 13px;
+  color: #52525b;
+  margin: 0 0 8px;
+}
+
+.focus-footer a {
+  color: #6366f1;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.focus-footer a:hover {
+  color: #818cf8;
+}
+
+/* ------------------------------------------------------------------ */
+/* Privacy Policy Page
+/* ------------------------------------------------------------------ */
+
+.focus-privacy-page {
+  min-height: 100vh;
+  background: #0a0a0a;
+  color: #f5f5f5;
+  font-family:
+    "opensans-regular",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  padding: 80px 24px;
+}
+
+.focus-privacy-container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.focus-privacy-container h1 {
+  font-size: 40px;
+  font-family: "opensans-bold", sans-serif;
+  color: #ffffff;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+.focus-privacy-container .effective-date {
+  font-size: 14px;
+  color: #71717a;
+  margin-bottom: 48px;
+}
+
+.focus-privacy-container h2 {
+  font-size: 22px;
+  font-family: "opensans-bold", sans-serif;
+  color: #ffffff;
+  margin-top: 48px;
+  margin-bottom: 16px;
+}
+
+.focus-privacy-container p {
+  font-size: 15px;
+  color: #a1a1aa;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.focus-privacy-container ul {
+  margin: 0 0 24px 0;
+  padding-left: 20px;
+}
+
+.focus-privacy-container ul li {
+  font-size: 15px;
+  color: #a1a1aa;
+  line-height: 1.8;
+  margin-bottom: 8px;
+  list-style: disc;
+}
+
+.focus-privacy-container a {
+  color: #6366f1;
+  text-decoration: none;
+}
+
+.focus-privacy-container a:hover {
+  color: #818cf8;
+}
+
+.focus-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #6366f1;
+  font-size: 14px;
+  text-decoration: none;
+  margin-bottom: 48px;
+  transition: color 0.2s ease;
+}
+
+.focus-back-link:hover {
+  color: #818cf8;
+}
+
+/* ------------------------------------------------------------------ */
+/* Responsive
+/* ------------------------------------------------------------------ */
+
+@media only screen and (max-width: 768px) {
+  .focus-hero h1 {
+    font-size: 40px;
+  }
+
+  .focus-hero .tagline {
+    font-size: 17px;
+  }
+
+  .focus-features h2,
+  .focus-screenshots h2,
+  .focus-privacy-section h2 {
+    font-size: 28px;
+  }
+
+  .focus-features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .focus-screenshot-item {
+    width: 180px;
+  }
+
+  .focus-privacy-container h1 {
+    font-size: 32px;
+  }
+}
