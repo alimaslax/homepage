@@ -14,15 +14,19 @@ import Header from "../components/Header";
 import { Analytics } from "@vercel/analytics/react";
 import type { AppContext, AppProps } from "next/app";
 import { SessionProvider } from "next-auth/react";
+import { useRouter } from "next/router";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+  const isFocusPage = router.pathname.startsWith("/focus");
+
   const activeLink = {
     active: Component.name,
   };
 
   return (
     <SessionProvider>
-      <Header {...activeLink} />
+      {!isFocusPage && <Header {...activeLink} />}
       <Component {...pageProps} />
       <Analytics />
     </SessionProvider>
