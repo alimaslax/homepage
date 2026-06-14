@@ -33,7 +33,7 @@
   height: 140%;
   background: radial-gradient(
     ellipse,
-    rgba(99, 102, 241, 0.08) 0%,
+    rgba(99, 102, 241, 0.06) 0%,
     transparent 70%
   );
   pointer-events: none;
@@ -50,21 +50,15 @@
 
 .focus-hero-text {
   flex: 1;
-  max-width: 500px;
+  max-width: 480px;
 }
 
-.focus-badge {
-  display: inline-block;
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: #a78bfa;
-  background: rgba(99, 102, 241, 0.1);
-  border: 1px solid rgba(99, 102, 241, 0.2);
-  padding: 6px 14px;
+.focus-app-icon-img {
+  width: 80px;
+  height: 80px;
   border-radius: 20px;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
+  box-shadow: 0 16px 48px rgba(99, 102, 241, 0.25);
 }
 
 .focus-hero-text h1 {
@@ -101,74 +95,32 @@
   width: auto;
 }
 
-.focus-qr-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
+/* ------------------------------------------------------------------ */
+/* Hero Finance Graphic
+/* ------------------------------------------------------------------ */
 
-.focus-qr-box {
-  width: 80px;
-  height: 80px;
-  background: #ffffff;
-  border-radius: 10px;
-  padding: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.focus-qr-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.focus-qr-label {
-  font-size: 13px;
-  color: #71717a;
-}
-
-/* Phone mockups */
-.focus-hero-phones {
+.focus-hero-graphic {
   flex: 1;
-  position: relative;
   display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 480px;
   align-items: center;
-  justify-content: center;
-  min-height: 500px;
 }
 
-.focus-phone {
-  position: absolute;
-  border-radius: 32px;
-  overflow: hidden;
-  box-shadow:
-    0 40px 80px rgba(0, 0, 0, 0.6),
-    0 0 0 1px rgba(255, 255, 255, 0.05);
-  background: #1a1a1a;
-}
-
-.focus-phone img {
-  display: block;
+.focus-hero-img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  border-radius: 20px;
+  border: 1px solid #1f1f23;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-.focus-phone-front {
-  width: 260px;
-  height: 520px;
-  z-index: 2;
-  transform: translateX(20px);
-}
-
-.focus-phone-back {
-  width: 240px;
-  height: 480px;
-  z-index: 1;
-  transform: translateX(-80px) translateY(20px) rotateY(5deg);
-  opacity: 0.85;
+.focus-hero-img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 32px 80px rgba(99, 102, 241, 0.12);
 }
 
 /* ------------------------------------------------------------------ */
@@ -209,14 +161,14 @@
 .focus-features-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 20px;
 }
 
 .focus-feature-card {
-  background: #0f0f0f;
+  background: #0a0a0a;
   border: 1px solid #1f1f23;
   border-radius: 20px;
-  padding: 36px 28px;
+  padding: 32px 24px;
   transition:
     border-color 0.25s ease,
     transform 0.25s ease;
@@ -228,15 +180,15 @@
 }
 
 .focus-feature-card .feature-icon {
-  font-size: 32px;
-  margin-bottom: 20px;
+  font-size: 28px;
+  margin-bottom: 16px;
 }
 
 .focus-feature-card h3 {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 600;
   color: #ffffff;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .focus-feature-card p {
@@ -244,64 +196,6 @@
   color: #a1a1aa;
   line-height: 1.7;
   margin: 0;
-}
-
-/* ------------------------------------------------------------------ */
-/* Showcase (Screenshots)
-/* ------------------------------------------------------------------ */
-
-.focus-showcase {
-  padding: 100px 48px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.focus-showcase-grid {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  padding: 20px 0;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-}
-
-.focus-showcase-grid::-webkit-scrollbar {
-  height: 4px;
-}
-
-.focus-showcase-grid::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.focus-showcase-grid::-webkit-scrollbar-thumb {
-  background: #333;
-  border-radius: 2px;
-}
-
-.focus-showcase-item {
-  flex: 0 0 auto;
-  width: 200px;
-  border-radius: 24px;
-  overflow: hidden;
-  border: 1px solid #1f1f23;
-  scroll-snap-align: center;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-  background: #0f0f0f;
-}
-
-.focus-showcase-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 20px 60px rgba(99, 102, 241, 0.15);
-}
-
-.focus-showcase-item img {
-  width: 100%;
-  height: auto;
-  display: block;
 }
 
 /* ------------------------------------------------------------------ */
@@ -317,16 +211,16 @@
 .focus-privacy-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 16px;
   margin-bottom: 40px;
 }
 
 .focus-privacy-point {
   display: flex;
   align-items: flex-start;
-  gap: 16px;
+  gap: 14px;
   padding: 24px;
-  background: #0f0f0f;
+  background: #0a0a0a;
   border: 1px solid #1f1f23;
   border-radius: 16px;
   transition: border-color 0.2s ease;
@@ -337,7 +231,7 @@
 }
 
 .focus-privacy-point .point-icon {
-  font-size: 24px;
+  font-size: 22px;
   flex-shrink: 0;
   margin-top: 2px;
 }
@@ -490,6 +384,11 @@
 /* ------------------------------------------------------------------ */
 
 @media only screen and (max-width: 900px) {
+  .focus-hero {
+    padding: 60px 32px;
+    min-height: auto;
+  }
+
   .focus-hero-content {
     flex-direction: column;
     text-align: center;
@@ -504,23 +403,23 @@
     font-size: 52px;
   }
 
+  .focus-app-icon-img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
   .focus-download-row {
     display: flex;
     justify-content: center;
   }
 
-  .focus-qr-wrapper {
-    justify-content: center;
-  }
-
-  .focus-hero-phones {
-    min-height: 400px;
+  .focus-hero-graphic {
+    max-width: 100%;
   }
 
   .focus-features-grid {
-    grid-template-columns: 1fr;
-    max-width: 400px;
-    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .focus-privacy-grid {
@@ -530,7 +429,7 @@
 
 @media only screen and (max-width: 600px) {
   .focus-hero {
-    padding: 60px 24px;
+    padding: 48px 20px;
   }
 
   .focus-hero-text h1 {
@@ -542,31 +441,24 @@
   }
 
   .focus-features,
-  .focus-showcase,
   .focus-privacy-section {
-    padding: 80px 24px;
+    padding: 80px 20px;
+  }
+
+  .focus-features-grid {
+    grid-template-columns: 1fr;
   }
 
   .focus-section-header h2 {
     font-size: 30px;
   }
 
-  .focus-showcase-item {
-    width: 160px;
-  }
-
-  .focus-phone-front {
-    width: 200px;
-    height: 400px;
-  }
-
-  .focus-phone-back {
-    width: 180px;
-    height: 360px;
+  .finance-card-amount {
+    font-size: 26px;
   }
 
   .focus-privacy-page {
-    padding: 60px 24px;
+    padding: 48px 20px;
   }
 
   .focus-privacy-container h1 {

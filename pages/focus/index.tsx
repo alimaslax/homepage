@@ -19,7 +19,11 @@ export default function FocusPage() {
         <section className="focus-hero">
           <div className="focus-hero-content">
             <div className="focus-hero-text">
-              <div className="focus-badge">Budgeting &amp; Accounting</div>
+              <img
+                src="/images/focus/icon.png"
+                alt="Focus app icon"
+                className="focus-app-icon-img"
+              />
               <h1>Focus</h1>
               <p className="tagline">
                 Take control of your finances. Track spending, manage budgets,
@@ -40,35 +44,20 @@ export default function FocusPage() {
                   />
                 </a>
               </div>
-
-              <div className="focus-qr-wrapper">
-                <div className="focus-qr-box">
-                  <img
-                    src="/images/focus-app/qr-code.png"
-                    alt="QR code to download Focus"
-                    onError={(e) => {
-                      // Fallback if QR image doesn't exist
-                      (e.target as HTMLImageElement).style.display = "none";
-                    }}
-                  />
-                </div>
-                <span className="focus-qr-label">Scan to download</span>
-              </div>
             </div>
 
-            <div className="focus-hero-phones">
-              <div className="focus-phone focus-phone-back">
-                <img
-                  src="/images/projects/focus2.png"
-                  alt="Focus app - accounts view"
-                />
-              </div>
-              <div className="focus-phone focus-phone-front">
-                <img
-                  src="/images/projects/focus1.png"
-                  alt="Focus app - dashboard"
-                />
-              </div>
+            {/* Finance-themed hero graphic */}
+            <div className="focus-hero-graphic">
+              <img
+                src="/images/focus/budget.png"
+                alt="Budget tracking interface"
+                className="focus-hero-img"
+              />
+              <img
+                src="/images/focus/finance.png"
+                alt="Finance overview"
+                className="focus-hero-img"
+              />
             </div>
           </div>
         </section>
@@ -104,29 +93,29 @@ export default function FocusPage() {
                 and monthly trends.
               </p>
             </div>
-          </div>
-        </section>
-
-        {/* App Screenshots */}
-        <section className="focus-showcase">
-          <div className="focus-section-header">
-            <h2>See it in action</h2>
-          </div>
-          <div className="focus-showcase-grid">
-            <div className="focus-showcase-item">
-              <img src="/images/projects/focus1.png" alt="Dashboard" />
+            <div className="focus-feature-card">
+              <div className="feature-icon">🔔</div>
+              <h3>Alerts</h3>
+              <p>
+                Get notified when you&apos;re close to budget limits or when
+                unusual transactions occur.
+              </p>
             </div>
-            <div className="focus-showcase-item">
-              <img src="/images/projects/focus2.png" alt="Accounts" />
+            <div className="focus-feature-card">
+              <div className="feature-icon">🎯</div>
+              <h3>Goals</h3>
+              <p>
+                Set savings goals and track progress. Stay motivated with visual
+                milestones.
+              </p>
             </div>
-            <div className="focus-showcase-item">
-              <img src="/images/projects/focus3.png" alt="Transactions" />
-            </div>
-            <div className="focus-showcase-item">
-              <img src="/images/projects/focus4.png" alt="Budget" />
-            </div>
-            <div className="focus-showcase-item">
-              <img src="/images/projects/focus5.png" alt="Insights" />
+            <div className="focus-feature-card">
+              <div className="feature-icon">📱</div>
+              <h3>Cross-Platform</h3>
+              <p>
+                Available on Android with iOS coming soon. Your data syncs
+                across all your devices.
+              </p>
             </div>
           </div>
         </section>
