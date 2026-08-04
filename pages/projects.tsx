@@ -2,10 +2,10 @@ import { default as ProjectsView } from "../components/Projects";
 import path from "path";
 import { promises as fs } from "fs";
 
-export default function ProjectsPage({ projects }) {
+export default function ProjectsPage({ groups }) {
   return (
     <div className="App">
-      <ProjectsView projects={projects} />
+      <ProjectsView groups={groups} />
     </div>
   );
 }
@@ -19,7 +19,7 @@ export async function getStaticProps() {
   const data = JSON.parse(fileContents);
   return {
     props: {
-      projects: data.projects,
+      groups: data.groups,
     },
   };
 }

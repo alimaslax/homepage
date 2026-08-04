@@ -1,5 +1,9 @@
 {
-    "projects": [
+    "groups": [
+        {
+            "id": "software-development",
+            "title": "Software Development",
+            "projects": [
         {
             "id": "horizon",
             "title": "Horizon",
@@ -139,6 +143,32 @@
             }
         },
         {
+            "id": "typeless-os",
+            "title": "typelessOS",
+            "subtitle": "Effortless macOS Experience",
+            "date": "2025",
+            "tagline": "Multi-layered macOS application for a seamless AI and terminal experience",
+            "tags": [
+                "macOS",
+                "Swift",
+                "AI",
+                "Terminal"
+            ],
+            "github": "https://github.com/alimaslax/typelessOS",
+            "description": [
+                "Multi-layered macOS application where different windows interact to provide a seamless AI and terminal experience.",
+                "Designed for an effortless macOS workflow.",
+                "Native Swift application with deep system integration."
+            ],
+            "architecture": null
+        }
+            ]
+        },
+        {
+            "id": "machine-learning",
+            "title": "Machine Learning",
+            "projects": [
+        {
             "id": "vits-svc",
             "title": "VITS SVC Data Collector",
             "subtitle": "Audio Processing Pipeline",
@@ -160,44 +190,73 @@
         },
         {
             "id": "somali-tts",
-            "title": "Somali TTS Dataset",
-            "subtitle": "Whisper-based Speech Dataset",
-            "date": "2024",
-            "tagline": "Curated Somali text-to-speech dataset with a clean processing pipeline",
+            "title": "Somali TTS",
+            "subtitle": "CosyVoice Training & Pause Alignment",
+            "date": "2025 — Present",
+            "tagline": "A local-first Somali speech pipeline: preserve the voice, recover its timing, and train a model that can carry both pronunciation and rhythm.",
             "tags": [
-                "Whisper",
-                "TTS",
-                "HuggingFace",
+                "CosyVoice 3",
+                "Python",
+                "ElevenLabs Scribe",
+                "Parquet",
                 "Somali",
-                "ML"
+                "Speech ML"
             ],
-            "github": "https://huggingface.co/datasets/lewenberg/somali-tts",
+            "github": null,
             "description": [
-                "Whisper-based Somali TTS dataset.",
-                "Curated and clean pipeline for data collection and processing.",
-                "Published dataset on HuggingFace for community use."
+                "Built a reproducible corpus pipeline around long-form Somali recordings: segmentation, denoising, loudness normalization, transcription, timestamp-aware review, and training manifest generation.",
+                "Kept audio and text as separate, auditable artifacts so text improvements never overwrite the recordings that define the speaker's identity and delivery.",
+                "Prepared 8,745 non-empty audio/transcript pairs with a deterministic 98/2 train-development split for controlled experiments.",
+                "Fine-tuned CosyVoice's language model and Flow components independently, so pronunciation and linguistic timing can be evaluated separately from acoustic rhythm and rendering."
             ],
-            "architecture": null
-        },
-        {
-            "id": "typeless-os",
-            "title": "typelessOS",
-            "subtitle": "Effortless macOS Experience",
-            "date": "2025",
-            "tagline": "Multi-layered macOS application for a seamless AI and terminal experience",
-            "tags": [
-                "macOS",
-                "Swift",
-                "AI",
-                "Terminal"
-            ],
-            "github": "https://github.com/alimaslax/typelessOS",
-            "description": [
-                "Multi-layered macOS application where different windows interact to provide a seamless AI and terminal experience.",
-                "Designed for an effortless macOS workflow.",
-                "Native Swift application with deep system integration."
-            ],
-            "architecture": null
+            "story": {
+                "title": "Building Somali prosody from the signal, not a punctuation guess",
+                "paragraphs": [
+                    "The project started with a practical constraint: Somali speech data is valuable only when the transcript, the speaker, and the timing remain connected. The pipeline turns approved long-form recordings into short, trainable clips without treating transcription as a one-way export. Each stage leaves a reviewable artifact behind — cleaned FLAC, source transcript JSON, derived text, metadata, manifests, and training outputs — so mistakes can be corrected without destroying provenance.",
+                    "The most important research question became pauses. Raw transcripts often flatten a natural delivery into a stream of words, while the recording still contains the breath, hesitation, emphasis, and sentence boundary. ElevenLabs word timestamps make that recoverable. For adjacent words, the gap is computed as next.start minus current.end; conservative thresholds then propose ordinary commas, periods, or ellipses. The audio never changes, and there are no invented pause tags. Instead, normal punctuation becomes an alignment cue the model can learn from repeated audio-text examples.",
+                    "CosyVoice separates the work into two learnable pieces. The LLM maps Somali text toward speech tokens, where pronunciation, phrasing, and linguistic timing live. The Flow model maps those tokens toward acoustic detail and temporal realization. Training both on the same aligned corpus is deliberate: the goal is not a second dataset of artificial rhythms, but better preservation of the rhythms already spoken in the source material. Independent checkpoints make it possible to compare an LLM-first change, a Flow-first change, and a paired change against the same held-out clips.",
+                    "The current workflow is designed like an experiment loop rather than a one-shot training run. Dataset revisions are versioned, timestamp-derived punctuation is sampled for human listening review, short natural phrases and held-out passages are compared across checkpoints, and only then are the best model pairings promoted into local inference. That makes improvements in Somali pronunciation measurable without losing sight of the thing that makes a voice feel human: where it waits, breathes, lands, and continues."
+                ],
+                "highlights": [
+                    { "value": "8,745", "label": "Audio-text pairs" },
+                    { "value": "98 / 2", "label": "Train-dev split" },
+                    { "value": "24 kHz", "label": "Final mono FLAC" },
+                    { "value": "LLM + Flow", "label": "Separate checkpoints" }
+                ]
+            },
+            "architecture": {
+                "title": "The Training Paradigm",
+                "summary": "Every layer is built to preserve an evidence trail from the original spoken performance to a repeatable CosyVoice experiment. The same aligned corpus serves both modules; the ablation plan reveals which module is responsible for an audible change.",
+                "layers": [
+                    {
+                        "name": "1. Source recordings & clip boundaries",
+                        "detail": "Long-form Somali recordings are segmented with Silero VAD into approximately 20–30 second clips. The processing runner refuses partial or conflicting outputs, preserving a clean source-to-clip relationship."
+                    },
+                    {
+                        "name": "2. Signal preparation",
+                        "detail": "DeepFilterNet 3 denoising and loudness normalization are applied once per clip batch. Final artifacts are mono, 24 kHz, 16-bit lossless FLAC — consistent input for training without duplicate temporary WAVs."
+                    },
+                    {
+                        "name": "3. Transcript, timestamps & pause alignment",
+                        "detail": "ElevenLabs JSON retains transcript text plus per-word start/end timing. Derived punctuation uses word gaps and conservative thresholds: short gaps stay unmarked; mid gaps suggest commas; larger boundaries suggest periods; ellipses remain reserved for genuine long holds or hesitation."
+                    },
+                    {
+                        "name": "4. Corpus build & validation",
+                        "detail": "Normalized text and audio paths become manifests, feature shards, and Parquet metadata. Mechanical checks catch missing files, duration and text anomalies, or split leakage; listening checks verify that the proposed punctuation still matches the speaker."
+                    },
+                    {
+                        "name": "5. LLM and Flow fine-tuning",
+                        "detail": "The LLM is adapted for Somali text-to-speech-token mapping, including pronunciation and phrasing. Flow is adapted for speech-token-to-mel acoustics. HiFT remains frozen; checkpoints are exported in a runtime-compatible form for local macOS inference."
+                    },
+                    {
+                        "name": "6. Evaluation & iteration",
+                        "detail": "A held-out development set and a small prosody listening suite compare base Flow + fine LLM, fine Flow + base LLM, and the paired model. Only a repeatable gain in clarity and pacing earns the next dataset or checkpoint revision."
+                    }
+                ],
+                "dataFlow": "Authorized Somali recordings → VAD clips → denoise + normalize → ElevenLabs transcript JSON with word timestamps → derived punctuation review → normalized manifests / Parquet → separate LLM and Flow fine-tunes → held-out listening comparisons → local zero-shot and checkpoint inference."
+            }
+        }
+            ]
         }
     ]
 }
